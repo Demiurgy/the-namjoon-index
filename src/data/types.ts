@@ -28,6 +28,13 @@ export type RelationType =
 
 export type EvidenceLevel = 'confirmed' | 'mentioned' | 'editorial';
 
+export type EditorialReading = {
+  title: string;
+  whyItMatters: string;
+  possibleResonance: string;
+  themes: string[];
+};
+
 export type Entity = {
   id: string;
   slug: string;
@@ -38,7 +45,14 @@ export type Entity = {
   creator?: string;
   year?: number;
   description: string;
-  image?: { url: string; alt: string; credit?: string; license?: string };
+  image?: {
+    url: string;
+    alt: string;
+    credit?: string;
+    license?: string;
+    sourceUrl?: string;
+  };
+  editorial?: EditorialReading;
   externalLinks?: { label: string; url: string }[];
 };
 
@@ -61,4 +75,19 @@ export type Source = {
   publishedAt?: string;
   accessedAt: string;
   sourceType: 'museum' | 'official_media' | 'interview' | 'social_post' | 'fan_archive';
+};
+
+export type TimelineCategory = 'literature' | 'visual-art' | 'music' | 'institutions' | 'screen';
+export type TimelinePrecision = 'exact' | 'year' | 'approximate' | 'scheduled';
+
+export type TimelineEvent = {
+  id: string;
+  sortDate: string;
+  displayDate: string;
+  precision: TimelinePrecision;
+  category: TimelineCategory;
+  title: string;
+  summary: string;
+  relationIds: string[];
+  sourceIds: string[];
 };
