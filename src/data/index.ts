@@ -228,6 +228,51 @@ export const entities: Entity[] = [
     alternativeNames: ['SeMA', 'Buk-Seoul Museum of Art'], description: 'The Seoul museum venue where RM was photographed with Kim Whanki’s The Eternal Song.',
   },
   {
+    id: 'film-rm-rpwp', slug: 'rm-right-people-wrong-place', type: 'film', title: 'RM: Right People, Wrong Place',
+    creator: 'Lee Seok-jun', year: 2024,
+    description: 'A documentary following the making of Right Place, Wrong Person and the movement between RM’s public role and Kim Namjoon’s private creative process.',
+    externalLinks: [{ label: 'Official release notice', url: 'https://weverse.io/bts/notice/23303' }],
+  },
+  {
+    id: 'film-social-dilemma', slug: 'the-social-dilemma', type: 'film', title: 'The Social Dilemma',
+    creator: 'Jeff Orlowski', year: 2020,
+    description: 'A documentary-drama examining how platform design, recommendation systems and surveillance advertising shape attention and public life.',
+    externalLinks: [{ label: 'Netflix title page', url: 'https://www.netflix.com/title/81254224' }],
+  },
+  {
+    id: 'film-decision-to-leave', slug: 'decision-to-leave', type: 'film', title: 'Decision to Leave',
+    originalTitle: '헤어질 결심', creator: 'Park Chan-wook', year: 2022,
+    description: 'A romantic mystery in which an investigation, translation and mediated images continually rearrange what its two central figures can know about each other.',
+    externalLinks: [{ label: 'CJ ENM film page', url: 'https://www.cjenm.com/en/featured-contents/decision-to-leave/' }],
+  },
+  {
+    id: 'film-the-fortress', slug: 'the-fortress-2017', type: 'film', title: 'The Fortress',
+    originalTitle: '남한산성', creator: 'Hwang Dong-hyuk', year: 2017,
+    description: 'A historical drama about rival strategies of resistance and survival during the Qing invasion of Joseon in 1636.',
+  },
+  {
+    id: 'film-eternal-sunshine', slug: 'eternal-sunshine-of-the-spotless-mind', type: 'film', title: 'Eternal Sunshine of the Spotless Mind',
+    creator: 'Michel Gondry', year: 2004,
+    description: 'A nonlinear romance about memory, erasure and the impossible wish to separate love from the pain it leaves behind.',
+  },
+  {
+    id: 'series-sweet-home', slug: 'sweet-home', type: 'series', title: 'Sweet Home',
+    originalTitle: '스위트홈', creator: 'Lee Eung-bok', year: 2020,
+    description: 'A survival-horror series that turns private desire and social isolation into literal monsters inside an apartment block.',
+    externalLinks: [{ label: 'Netflix title page', url: 'https://www.netflix.com/title/81061734' }],
+  },
+  {
+    id: 'series-you-and-everything-else', slug: 'you-and-everything-else', type: 'series', title: 'You and Everything Else',
+    originalTitle: '은중과 상연', creator: 'Jo Young-min', year: 2025,
+    description: 'A limited series about two women whose friendship stretches across admiration, envy, estrangement and an end-of-life request.',
+    externalLinks: [{ label: 'Netflix title page', url: 'https://www.netflix.com/title/81739037' }],
+  },
+  {
+    id: 'film-the-world-of-love', slug: 'the-world-of-love', type: 'film', title: 'The World of Love',
+    originalTitle: '세계의 주인', creator: 'Yoon Ga-eun', year: 2025,
+    description: 'A coming-of-age drama that observes the difficult social world of adolescence from a young person’s point of view.',
+  },
+  {
     id: 'indigo', slug: 'indigo', type: 'album', title: 'Indigo', year: 2022,
     description: 'RM’s solo album, documented in the official BIGHIT MUSIC discography.',
     image: {
@@ -296,6 +341,110 @@ export const sources: Source[] = [
     id: 'institution-vpl-bookshelf', title: 'Namjoon’s Bookshelf', publisher: 'Vancouver Public Library',
     url: 'https://vpl.bibliocommons.com/v2/list/display/1338249780/1429564517', accessedAt: '2026-08-10', sourceType: 'institutional',
   },
+  {
+    id: 'weverse-in-the-soop2-guide', title: 'In the SOOP BTS ver. Season 2 global paid content user guide', publisher: 'Weverse',
+    url: 'https://weverse.io/bts/notice/1720', publishedAt: '2021-09-23', accessedAt: '2026-08-10', sourceType: 'official_media',
+  },
+  {
+    id: 'publisher-hanbooks-depth', title: 'The Depth of the Landscape', publisher: 'HanBooks',
+    url: 'https://www.hanbooks.com/deofla.html', accessedAt: '2026-08-10', sourceType: 'institutional',
+  },
+  {
+    id: 'publisher-penguin-honeybees', title: 'Honeybees and Distant Thunder sample and edition record', publisher: 'Penguin Random House UK',
+    url: 'https://cdn.penguin.co.uk/dam-assets/books/9780857527950/9780857527950-sample.pdf', accessedAt: '2026-08-10', sourceType: 'institutional',
+  },
+  {
+    id: 'hankyung-summers-end', title: 'The book BTS RM reads at the end of summer', publisher: 'The Korea Economic Daily',
+    url: 'https://www.hankyung.com/article/202209227766i', publishedAt: '2022-09-22', accessedAt: '2026-08-10', sourceType: 'secondary',
+  },
+  {
+    id: 'publisher-thames-saul-leiter', title: 'All About Saul Leiter', publisher: 'Thames & Hudson',
+    url: 'https://www.thamesandhudson.com/products/all-about-saul-leiter', accessedAt: '2026-08-10', sourceType: 'institutional',
+  },
+  {
+    id: 'publisher-prh-midnight-library', title: 'The Midnight Library', publisher: 'Penguin Random House',
+    url: 'https://www.penguinrandomhouse.com/books/575653/the-midnight-library-by-matt-haig/', accessedAt: '2026-08-10', sourceType: 'institutional',
+  },
+  {
+    id: 'publisher-prh-doing-good', title: 'Doing Good Better', publisher: 'Penguin Random House',
+    url: 'https://www.penguinrandomhouse.com/books/316786/doing-good-better-by-william-macaskill/', accessedAt: '2026-08-10', sourceType: 'institutional',
+  },
+  {
+    id: 'reddit-its2-ep3', title: 'In the SOOP BTS ver. Season 2 — Episode 3 discussion', publisher: 'r/bangtan',
+    url: 'https://www.reddit.com/r/bangtan/comments/qic9ls', publishedAt: '2021-10-29', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'reddit-its2-ep4', title: 'In the SOOP BTS ver. Season 2 — Episode 4 discussion', publisher: 'r/bangtan',
+    url: 'https://www.reddit.com/r/bangtan/comments/qnama0', publishedAt: '2021-11-05', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'reddit-its2-ep5', title: 'In the SOOP BTS ver. Season 2 — Episode 5 discussion', publisher: 'r/bangtan',
+    url: 'https://www.reddit.com/r/bangtan/comments/qsanxa', publishedAt: '2021-11-12', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'elcomercio-its2-ep3', title: 'What book did SUGA read and why did ARMY react?', publisher: 'El Comercio',
+    url: 'https://elcomercio.pe/luces/musica/bts-que-libro-leyo-suga-y-por-que-army-se-emociono-al-conocer-el-titulo-suga-rapero-k-pop-grupo-musical-idol-tdex-noticia/', publishedAt: '2021-11-24', accessedAt: '2026-08-10', sourceType: 'secondary',
+  },
+  {
+    id: 'buro-midnight-library', title: 'Read like BTS’ RM: seven books connected to Kim Namjoon', publisher: 'BURO.',
+    url: 'https://www.buro247.my/culture/read-like-bts-rm-book-recommendations-namjoon.html', accessedAt: '2026-08-10', sourceType: 'secondary',
+  },
+  {
+    id: 'gq-midnight-library', title: 'GQ Reads: five books connected to RM', publisher: 'GQ India',
+    url: 'https://www.gqindia.com/content/gq-reads-5-books-recommended-by-rm-that-flaunt-the-bts-leaders-lyrical-prowess', accessedAt: '2026-08-10', sourceType: 'secondary',
+  },
+  {
+    id: 'ameblo-midnight-highlight', title: 'In the SOOP 2: RM and The Midnight Library highlighted passage', publisher: 'Ameblo / moon-jin1992',
+    url: 'https://ameblo.jp/moon-jin1992/entry-12710503871.html', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'bts-twitter-green', title: 'Green: RM photo set with books and art', publisher: 'BTS official account / X',
+    url: 'https://x.com/BTS_twt/status/1445397240118382592', publishedAt: '2021-10-05', accessedAt: '2026-08-10', sourceType: 'social_post',
+  },
+  {
+    id: 'reddit-rm-bookshelf', title: '211005 RM', publisher: 'r/bangtan',
+    url: 'https://www.reddit.com/r/bangtan/comments/q1xo77', publishedAt: '2021-10-05', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'weverse-rm-20201004', title: 'RM book, documentary and song post', publisher: 'Weverse',
+    url: 'https://weverse.io/bts/artist/1640184234924405', publishedAt: '2020-10-04', accessedAt: '2026-08-10', sourceType: 'social_post',
+  },
+  {
+    id: 'koreaboo-rm-recs', title: 'RM’s latest book, film and song recommendations', publisher: 'Koreaboo',
+    url: 'https://www.koreaboo.com/news/bts-rm-latest-book-film-song-recommendations/', publishedAt: '2020-10-03', accessedAt: '2026-08-11', sourceType: 'secondary',
+  },
+  {
+    id: 'reddit-weekly-20201004', title: 'Weekly Round-Up: September 28–October 4', publisher: 'r/bangtan',
+    url: 'https://www.reddit.com/r/bangtan/comments/j5032t', publishedAt: '2020-10-04', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'weverse-rpwp-film', title: 'RM: Right People, Wrong Place release information', publisher: 'Weverse',
+    url: 'https://weverse.io/bts/notice/23303', publishedAt: '2024-10-30', accessedAt: '2026-08-11', sourceType: 'official_media',
+  },
+  {
+    id: 'netflix-bts-watchlist', title: 'BTS’s favourite series to watch on Netflix', publisher: 'Netflix Tudum',
+    url: 'https://www.netflix.com/tudum/articles/bts-watch-list', publishedAt: '2026-03-27', accessedAt: '2026-08-11', sourceType: 'official_media',
+  },
+  {
+    id: 'soompi-rm-films-books', title: 'RM talks about films and books with fans', publisher: 'Soompi',
+    url: 'https://www.soompi.com/article/1074523wpp/btss-rm-talks-films-books-fans', publishedAt: '2017-11-10', accessedAt: '2026-08-11', sourceType: 'secondary',
+  },
+  {
+    id: 'archive-decision-to-leave', title: 'Finally, Park Chan-wook — interview with RM', publisher: 'BTS Interview Archive',
+    url: 'https://btsinterviews.wordpress.com/2023/02/22/01-23-finally-park-chanwook-with-namjoon/', publishedAt: '2023-02-22', accessedAt: '2026-08-11', sourceType: 'fan_archive',
+  },
+  {
+    id: 'republica-rm-sweet-home', title: 'RM explains why he liked Sweet Home', publisher: 'La República',
+    url: 'https://larepublica.pe/cultura-asiatica/2021/01/19/bts-namjoon-revela-por-que-le-gusta-sweet-home-de-song-kang-en-netflix', publishedAt: '2021-01-19', accessedAt: '2026-08-11', sourceType: 'secondary',
+  },
+  {
+    id: 'recreio-rm-films', title: 'Ten films connected to RM', publisher: 'Recreio',
+    url: 'https://recreio.com.br/noticias/entretenimento/10-filmes-recomendados-por-rm-do-bts.phtml', publishedAt: '2024-12-08', accessedAt: '2026-08-11', sourceType: 'secondary',
+  },
+  {
+    id: 'recreio-world-of-love', title: 'RM names a favourite film', publisher: 'Recreio',
+    url: 'https://recreio.com.br/noticias/entretenimento/qual-e-o-filme-favorito-do-rm-descubra-o-titulo-recomendado-pelo-lider-do-bts.phtml', publishedAt: '2026-06-01', accessedAt: '2026-08-11', sourceType: 'secondary',
+  },
 ];
 
 export const relations: Relation[] = [
@@ -333,14 +482,40 @@ export const relations: Relation[] = [
   { id: 'rm-indigo', from: 'rm', to: 'indigo', type: 'created_by', date: '2022', note: 'Indigo appears in RM’s official BIGHIT MUSIC discography.', evidenceLevel: 'confirmed', sourceIds: ['bighit-indigo'] },
   { id: 'yun-indigo-cover', from: 'yun-hyong-keun', to: 'indigo', type: 'featured_in', date: '2022', note: 'Weverse Magazine states that Indigo features work by Yun Hyong-keun on its cover, connecting RM’s music and visual-art interests.', evidenceLevel: 'confirmed', sourceIds: ['weverse-bibilly-hills'] },
   { id: 'rm-mono', from: 'rm', to: 'mono', type: 'created_by', date: '2018', note: 'mono. appears in RM’s official BIGHIT MUSIC discography.', evidenceLevel: 'confirmed', sourceIds: ['bighit-mono'] },
+  { id: 'rm-rpwp-film', from: 'rm', to: 'film-rm-rpwp', type: 'featured_in', date: '2024', note: 'The official release notice identifies this as RM’s documentary and describes its focus on the creation of Right Place, Wrong Person.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['weverse-rpwp-film'] },
+  { id: 'rm-social-dilemma', from: 'rm', to: 'film-social-dilemma', type: 'mentioned', date: '2020', note: 'A contemporaneous report reproduces RM’s Weverse post and identifies The Social Dilemma as the documentary he recommended. The archived primary URL is retained, but its wording is not currently accessible without sign-in.', evidenceLevel: 'mentioned', evidenceOrigin: 'public_observation', sourceIds: ['weverse-rm-20201004', 'koreaboo-rm-recs'] },
+  { id: 'rm-decision-to-leave', from: 'rm', to: 'film-decision-to-leave', type: 'watched', date: '2023', note: 'A translated archive of RM’s published conversation with Park Chan-wook records that Decision to Leave was the only film he had watched more than four times.', evidenceLevel: 'mentioned', evidenceOrigin: 'direct_statement', sourceIds: ['archive-decision-to-leave'] },
+  { id: 'rm-the-fortress', from: 'rm', to: 'film-the-fortress', type: 'watched', date: '2017', note: 'A contemporaneous recap of RM’s V Live says he had recently watched The Fortress and discussed the historical conflict at its centre.', evidenceLevel: 'mentioned', evidenceOrigin: 'official_summary', sourceIds: ['soompi-rm-films-books'] },
+  { id: 'rm-eternal-sunshine', from: 'rm', to: 'film-eternal-sunshine', type: 'mentioned', note: 'Later screen watchlist compilations repeatedly connect the film to RM; the index keeps the relationship at mentioned until the original broadcast or post is located.', evidenceLevel: 'mentioned', evidenceOrigin: 'community_identification', sourceIds: ['recreio-rm-films'] },
+  { id: 'rm-sweet-home', from: 'rm', to: 'series-sweet-home', type: 'watched', date: '2021', note: 'A report on RM’s live conversation records that he watched Sweet Home and discussed enjoying the series. The original broadcast locator remains to be added.', evidenceLevel: 'mentioned', evidenceOrigin: 'official_summary', sourceIds: ['republica-rm-sweet-home'] },
+  { id: 'rm-you-and-everything-else', from: 'rm', to: 'series-you-and-everything-else', type: 'recommended', date: '2026', note: 'Netflix’s own BTS watchlist identifies You and Everything Else as recommended by RM.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['netflix-bts-watchlist'] },
+  { id: 'rm-world-of-love', from: 'rm', to: 'film-the-world-of-love', type: 'mentioned', date: '2026', note: 'A recent report attributes a favourite-film statement to RM. Until the underlying fan conversation receives a precise locator, the index publishes only the narrower mentioned relationship.', evidenceLevel: 'mentioned', evidenceOrigin: 'public_observation', sourceIds: ['recreio-world-of-love'] },
 ];
 
 export const timelineEvents: TimelineEvent[] = [
+  {
+    id: 'event-screen-2026', sortDate: '2026-06-01', displayDate: '2026 · PUBLIC RECORD', precision: 'approximate', category: 'screen',
+    title: 'Two new screen choices enter the record',
+    summary: 'Netflix directly identifies You and Everything Else as RM’s recommendation. A separate report connects him to The World of Love, but the latter stays at mentioned until its original conversation has a precise locator.',
+    relationIds: ['rm-you-and-everything-else', 'rm-world-of-love'], sourceIds: ['netflix-bts-watchlist', 'recreio-world-of-love'],
+  },
   {
     id: 'event-rm-x-sfmoma', sortDate: '2026-10-03', displayDate: '03 OCT 2026 — 07 FEB 2027', precision: 'scheduled', category: 'institutions',
     title: 'RM x SFMOMA opens a collection to the public',
     summary: 'One exhibition episode joins RM’s curatorial role, SFMOMA, works from his collection and the first identified artwork currently represented in the index.',
     relationIds: ['rm-sfmoma-exhibition', 'exhibition-sfmoma', 'rm-collection', 'rm-yun-work'], sourceIds: ['sfmoma-rm-exhibition'],
+  },
+  {
+    id: 'event-rpwp-film', sortDate: '2024-12-05', displayDate: '05 DEC 2024', precision: 'exact', category: 'screen',
+    title: 'Right People, Wrong Place moves from album process to cinema',
+    summary: 'The official documentary release creates a screen record centred on RM’s own creative process and premiered after its selection for the Busan International Film Festival.',
+    relationIds: ['rm-rpwp-film'], sourceIds: ['weverse-rpwp-film'],
+  },
+  {
+    id: 'event-decision-to-leave', sortDate: '2023-02-22', displayDate: '2023 · PUBLISHED CONVERSATION', precision: 'year', category: 'screen',
+    title: 'Decision to Leave becomes a repeated viewing',
+    summary: 'A translated archive of RM’s conversation with Park Chan-wook records an unusually sustained return to the film. The index preserves the direct-statement origin while identifying the available source as an archive.',
+    relationIds: ['rm-decision-to-leave'], sourceIds: ['archive-decision-to-leave'],
   },
   {
     id: 'event-indigo', sortDate: '2022-12-31', displayDate: '2022', precision: 'year', category: 'music',
@@ -361,6 +536,12 @@ export const timelineEvents: TimelineEvent[] = [
     relationIds: ['rm-daegu-art-museum', 'rm-kang-carnation', 'rm-munnamu', 'kang-carnation-daegu', 'munnamu-kang-carnation'], sourceIds: ['daegu-museum-rm-kang', 'artbava-kang-carnation', 'daegu-museum-kang-video'],
   },
   {
+    id: 'event-sweet-home', sortDate: '2021-01-19', displayDate: 'JAN 2021 · LIVE RECAP', precision: 'approximate', category: 'screen',
+    title: 'Sweet Home appears in a live-viewing conversation',
+    summary: 'A contemporaneous report records RM discussing the series after watching it. The exact broadcast timestamp remains a research locator, so the connection stays at mentioned strength.',
+    relationIds: ['rm-sweet-home'], sourceIds: ['republica-rm-sweet-home'],
+  },
+  {
     id: 'event-books-2021', sortDate: '2021-12-31', displayDate: '2021 · PUBLIC RECORD', precision: 'approximate', category: 'literature',
     title: 'Two books enter the public record',
     summary: 'The Midnight Library and Doing Good Better are documented as public appearances or mentions. The archive deliberately does not convert either appearance into endorsement.',
@@ -373,10 +554,22 @@ export const timelineEvents: TimelineEvent[] = [
     relationIds: ['rm-yun', 'rm-depth-landscape'], sourceIds: ['weverse-modern-art', 'weverse-bibilly-hills'],
   },
   {
+    id: 'event-social-dilemma', sortDate: '2020-10-04', displayDate: '04 OCT 2020 · WEVERSE POST', precision: 'exact', category: 'screen',
+    title: 'The Social Dilemma joins a book, film and song recommendation post',
+    summary: 'The archived primary URL and a contemporaneous illustrated report converge on the documentary. Because the legacy post currently requires sign-in, the public graph retains the narrower mentioned label.',
+    relationIds: ['rm-social-dilemma'], sourceIds: ['weverse-rm-20201004', 'koreaboo-rm-recs'],
+  },
+  {
     id: 'event-mono', sortDate: '2018-12-31', displayDate: '2018', precision: 'year', category: 'music',
     title: 'mono. enters RM’s solo discography',
     summary: 'The playlist-style release anchors the earliest dated connection currently represented in this version of the index.',
     relationIds: ['rm-mono'], sourceIds: ['bighit-mono'],
+  },
+  {
+    id: 'event-the-fortress', sortDate: '2017-11-10', displayDate: 'NOV 2017 · LIVE RECAP', precision: 'approximate', category: 'screen',
+    title: 'The Fortress anchors the earliest screen conversation',
+    summary: 'A contemporaneous report on RM’s broadcast records a recent viewing and his discussion of the historical conflict dramatised by the film.',
+    relationIds: ['rm-the-fortress'], sourceIds: ['soompi-rm-films-books'],
   },
 ];
 

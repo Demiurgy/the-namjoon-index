@@ -32,6 +32,7 @@ All notable changes to The Namjoon (RM) Index are recorded here.
 - Reworked map geometry per semantic layer: compact area hubs for `Areas`, tighter grouped nodes for `Groups`, and content-fitted regions for `Entities`.
 - Moved group nodes, the central RM node and the lower map row to remove unused interior space instead of only shrinking their background frames.
 - Reduced the Finside evidence-protocol banner and changed the Atlas prefix from `Protocol 01 /` to `Protocol /`.
+- Standardised Finside area containers and hubs as rounded rectangles across every semantic zoom phase.
 
 ### Fixed
 
@@ -42,6 +43,9 @@ All notable changes to The Namjoon (RM) Index are recorded here.
 - Removed trailing periods from main display headings.
 - Removed the unsupported `Sorted by relevance` label from Explore.
 - Removed large empty areas inside default and grouped map regions while keeping every rendered connection inside the graph canvas.
+- Removed the empty React Flow minimap overlay from both visual themes so it no longer covers the map.
+- Separated the zoom controls from the semantic phase scale so the two map controls never overlap.
+- Added a shared safe header gutter and content-fitted region heights for the Entities phase, preventing cards from colliding with area labels in either theme.
 
 ### Verified
 
