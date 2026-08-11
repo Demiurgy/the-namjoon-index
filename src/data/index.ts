@@ -1,4 +1,9 @@
-import type { Entity, Relation, Source, TimelineEvent } from './types';
+import communityArchiveInventory from '../../research/community-archives.json';
+import publicFindingInventory from '../../research/public-findings.json';
+import type { CommunityArchive, Entity, Relation, ResearchFinding, Source, TimelineEvent } from './types';
+
+export const communityArchives = communityArchiveInventory.archives as CommunityArchive[];
+export const researchFindings = publicFindingInventory.findings as ResearchFinding[];
 
 export const entities: Entity[] = [
   {
@@ -187,6 +192,28 @@ export const entities: Entity[] = [
     },
   },
   {
+    id: 'artwork-kang-yobae-munnamu', slug: 'munnamu-kang-yobae', type: 'artwork', title: 'Munnamu',
+    originalTitle: '먼나무', creator: 'Kang Yobae', year: 2020,
+    description: 'A painting identified by Daegu Art Museum as the work shown in RM’s public verification photograph during Kang Yobae’s exhibition.',
+    externalLinks: [{ label: 'Museum record', url: 'https://www.instagram.com/p/CWCNRdyvJDA/' }],
+  },
+  {
+    id: 'exhibition-kang-yobae-carnation', slug: 'kang-yobae-carnation', type: 'exhibition',
+    title: 'Kang Yobae: Carnation — When Mind Becomes Body', originalTitle: '강요배: 카네이션-마음이 몸이 될 때',
+    creator: 'Daegu Art Museum', year: 2021,
+    description: 'The 21st Lee In-sung Art Award exhibition, held at Daegu Art Museum from 13 October 2021 through 9 January 2022.',
+    externalLinks: [
+      { label: 'Exhibition record', url: 'https://www.artbava.com/exhibits/%EA%B0%95%EC%9A%94%EB%B0%B0-%EC%B9%B4%EC%9D%B4%EB%84%A4%EC%9D%B4%EC%85%98-%EB%A7%88%EC%9D%8C%EC%9D%B4-%EB%AA%B8%EC%9D%B4-%EB%90%A0-%EB%95%8C' },
+      { label: 'Museum video', url: 'https://www.youtube.com/watch?v=qCG8cS9RW3E' },
+    ],
+  },
+  {
+    id: 'museum-daegu-art-museum', slug: 'daegu-art-museum', type: 'museum', title: 'Daegu Art Museum',
+    originalTitle: '대구미술관', year: 2011,
+    description: 'The municipal art museum that confirmed RM’s visit and identified Kang Yobae’s Munnamu in his public photograph.',
+    externalLinks: [{ label: 'Museum website', url: 'https://daeguartmuseum.or.kr/' }],
+  },
+  {
     id: 'rm-x-sfmoma', slug: 'rm-x-sfmoma', type: 'exhibition', title: 'RM x SFMOMA: Between You and Me', year: 2026,
     description: 'An exhibition bringing together 200 works from RM’s collection and SFMOMA, curated by RM with SFMOMA curators.',
     externalLinks: [{ label: 'Exhibition page', url: 'https://www.sfmoma.org/exhibition/rm-x-sfmoma/' }],
@@ -203,11 +230,19 @@ export const entities: Entity[] = [
   {
     id: 'indigo', slug: 'indigo', type: 'album', title: 'Indigo', year: 2022,
     description: 'RM’s solo album, documented in the official BIGHIT MUSIC discography.',
+    image: {
+      url: '/images/music/indigo.jpg', alt: 'Cover of Indigo by RM',
+      credit: 'Album cover: BIGHIT MUSIC; image via Apple Music', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://music.apple.com/us/album/indigo/1654548355',
+    },
     externalLinks: [{ label: 'Official album page', url: 'https://bts.ibighit.com/eng/discography/rm/detail/indigo/' }],
   },
   {
     id: 'mono', slug: 'mono', type: 'album', title: 'mono.', year: 2018,
     description: 'RM’s playlist-style release, documented in the official BIGHIT MUSIC discography.',
+    image: {
+      url: '/images/music/mono.png', alt: 'Cover of mono. by RM',
+      credit: 'Album cover: BIGHIT MUSIC', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://bts.ibighit.com/eng/discography/rm/detail/mono/',
+    },
     externalLinks: [{ label: 'Official album page', url: 'https://bts.ibighit.com/eng/discography/rm/detail/mono/' }],
   },
 ];
@@ -237,6 +272,30 @@ export const sources: Source[] = [
     id: 'bighit-mono', title: 'mono. | RM', publisher: 'BIGHIT MUSIC',
     url: 'https://bts.ibighit.com/eng/discography/rm/detail/mono/', accessedAt: '2026-08-10', sourceType: 'official_media',
   },
+  {
+    id: 'daegu-museum-rm-kang', title: 'RM visit and Kang Yobae work', publisher: 'Daegu Art Museum',
+    url: 'https://www.instagram.com/p/CWCNRdyvJDA/', publishedAt: '2021-11-08', accessedAt: '2026-08-10', sourceType: 'museum',
+  },
+  {
+    id: 'artbava-kang-carnation', title: 'Kang Yobae: Carnation — When Mind Becomes Body', publisher: 'ARTBAVA',
+    url: 'https://www.artbava.com/exhibits/%EA%B0%95%EC%9A%94%EB%B0%B0-%EC%B9%B4%EC%9D%B4%EB%84%A4%EC%9D%B4%EC%85%98-%EB%A7%88%EC%9D%8C%EC%9D%B4-%EB%AA%B8%EC%9D%B4-%EB%90%A0-%EB%95%8C', accessedAt: '2026-08-10', sourceType: 'secondary',
+  },
+  {
+    id: 'daegu-museum-kang-video', title: 'Kang Yobae: Carnation — When Mind Becomes Body', publisher: 'Daegu Art Museum / YouTube',
+    url: 'https://www.youtube.com/watch?v=qCG8cS9RW3E', accessedAt: '2026-08-10', sourceType: 'museum',
+  },
+  {
+    id: 'fan-namjoons-booklist', title: 'Namjoon’s Booklist', publisher: 'Namjoon’s Booklist',
+    url: 'https://namjoonsbooklist.com/', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'fan-rkive-read-with-bts', title: 'read with bts rkive', publisher: 'to live, to love',
+    url: 'https://rkivelibrary.wordpress.com/2023/01/25/read-with-bts-rkive/', publishedAt: '2023-01-25', accessedAt: '2026-08-10', sourceType: 'fan_archive',
+  },
+  {
+    id: 'institution-vpl-bookshelf', title: 'Namjoon’s Bookshelf', publisher: 'Vancouver Public Library',
+    url: 'https://vpl.bibliocommons.com/v2/list/display/1338249780/1429564517', accessedAt: '2026-08-10', sourceType: 'institutional',
+  },
 ];
 
 export const relations: Relation[] = [
@@ -246,13 +305,13 @@ export const relations: Relation[] = [
   { id: 'rm-kwon', from: 'rm', to: 'kwon-dae-sup', type: 'admired', note: 'The source describes RM posting a photograph with a Kwon Dae-sup moon jar and expressing admiration for the artist’s work.', evidenceLevel: 'confirmed', sourceIds: ['weverse-modern-art'] },
   { id: 'rm-joung', from: 'rm', to: 'joung-young-ju', type: 'admired', note: 'Joung Young-ju is included among the Korean artists discussed through RM’s public interests in the official Weverse feature.', evidenceLevel: 'confirmed', sourceIds: ['weverse-modern-art'] },
   { id: 'rm-kang', from: 'rm', to: 'kang-yobae', type: 'mentioned', note: 'Weverse identifies Kang Yobae’s art essay as a book RM introduced as something he was recently immersed in.', evidenceLevel: 'mentioned', sourceIds: ['weverse-modern-art'] },
-  { id: 'rm-depth-landscape', from: 'rm', to: 'book-depth-of-the-landscape', type: 'read', date: '2020', note: 'Weverse Magazine states that RM had been reading Kang Yobae’s collection of art and personal writing.', evidenceLevel: 'confirmed', sourceIds: ['weverse-modern-art', 'weverse-bibilly-hills'] },
+  { id: 'rm-depth-landscape', from: 'rm', to: 'book-depth-of-the-landscape', type: 'read', date: '2020', note: 'Weverse Magazine states that RM had been reading Kang Yobae’s collection of art and personal writing.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['weverse-modern-art', 'weverse-bibilly-hills'], discoveryCredits: [{ sourceId: 'fan-namjoons-booklist', role: 'indexed', note: 'This community bibliography helped surface the title and preserve a route back to public references.' }] },
   { id: 'depth-landscape-kang', from: 'book-depth-of-the-landscape', to: 'kang-yobae', type: 'created_by', note: 'The volume brings together Kang Yobae’s own writing, paintings and reflections, creating a documented bridge between literature and visual art.', evidenceLevel: 'confirmed', sourceIds: ['weverse-modern-art'] },
   { id: 'rm-honeybees', from: 'rm', to: 'book-honeybees-distant-thunder', type: 'mentioned', note: 'Weverse Magazine includes Mitsubachi to Enrai among books RM had recently mentioned. The source does not establish a direct recommendation.', evidenceLevel: 'mentioned', sourceIds: ['weverse-bibilly-hills'] },
   { id: 'rm-that-summers-end', from: 'rm', to: 'book-that-summers-end', type: 'mentioned', date: '2022', note: 'Weverse Magazine includes End of the Summer among books RM had recently mentioned. The archive uses the collection’s English title, That Summer’s End.', evidenceLevel: 'mentioned', sourceIds: ['weverse-bibilly-hills'] },
   { id: 'rm-all-about-saul-leiter', from: 'rm', to: 'book-all-about-saul-leiter', type: 'mentioned', note: 'Weverse Magazine includes All About Saul Leiter among books RM had recently mentioned.', evidenceLevel: 'mentioned', sourceIds: ['weverse-bibilly-hills'] },
-  { id: 'rm-midnight-library', from: 'rm', to: 'book-midnight-library', type: 'mentioned', date: '2021', note: 'Weverse Magazine includes The Midnight Library among books RM had recently mentioned. Independent research into the exact In the SOOP 2 scene remains outside this public claim.', evidenceLevel: 'mentioned', sourceIds: ['weverse-bibilly-hills'] },
-  { id: 'rm-doing-good-better', from: 'rm', to: 'book-doing-good-better', type: 'mentioned', date: '2021', note: 'Weverse Magazine includes Doing Good Better among books RM had recently mentioned. A bookshelf identification exists in research, but no reading or recommendation claim is made here.', evidenceLevel: 'mentioned', sourceIds: ['weverse-bibilly-hills'] },
+  { id: 'rm-midnight-library', from: 'rm', to: 'book-midnight-library', type: 'mentioned', date: '2021', note: 'Weverse Magazine includes The Midnight Library among books RM had recently mentioned. Independent research into the exact In the SOOP 2 scene remains outside this public claim.', evidenceLevel: 'mentioned', evidenceOrigin: 'official_summary', sourceIds: ['weverse-bibilly-hills'], discoveryCredits: [{ sourceId: 'fan-rkive-read-with-bts', role: 'identified', locator: 'In the SOOP 2 table: episode 1 TBR mention; episode 3 reading', note: 'This fan archive mapped the episode sequence behind a stronger reading lead. The public claim remains the narrower official mention until a primary timestamp is checked.' }] },
+  { id: 'rm-doing-good-better', from: 'rm', to: 'book-doing-good-better', type: 'mentioned', date: '2021', note: 'Weverse Magazine includes Doing Good Better among books RM had recently mentioned. A bookshelf identification exists in research, but no reading or recommendation claim is made here.', evidenceLevel: 'mentioned', evidenceOrigin: 'official_summary', sourceIds: ['weverse-bibilly-hills'], discoveryCredits: [{ sourceId: 'institution-vpl-bookshelf', role: 'identified', locator: 'Doing Good Better entry', note: 'Vancouver Public Library identified the book in RM’s official 2021 bookshelf photograph. That dated visual identification remains a separate research finding pending an independent edition match.' }] },
   { id: 'rm-yun-work', from: 'rm', to: 'untitled-1973-yun', type: 'collected', date: '2026', note: 'SFMOMA lists this work as part of the collection of RM.', evidenceLevel: 'confirmed', sourceIds: ['sfmoma-rm-exhibition'] },
   { id: 'yun-work-artist', from: 'untitled-1973-yun', to: 'yun-hyong-keun', type: 'created_by', note: 'The artwork is attributed to Yun Hyong-keun by SFMOMA.', evidenceLevel: 'confirmed', sourceIds: ['sfmoma-rm-exhibition'] },
   { id: 'rm-eternal-song', from: 'rm', to: 'the-eternal-song', type: 'mentioned', note: 'RM was photographed with the work at a museum exhibition; this does not establish ownership.', evidenceLevel: 'mentioned', sourceIds: ['weverse-modern-art'] },
@@ -262,6 +321,12 @@ export const relations: Relation[] = [
   { id: 'bamboo-lee', from: 'bamboo-lee-ungno', to: 'lee-ungno', type: 'created_by', note: 'The work is identified as Lee Ungno’s Bamboo.', evidenceLevel: 'confirmed', sourceIds: ['weverse-modern-art'] },
   { id: 'rm-moon-jar', from: 'rm', to: 'moon-jar-kwon', type: 'mentioned', note: 'RM was photographed with a Kwon Dae-sup moon jar; the source does not confirm that this particular work belongs to him.', evidenceLevel: 'mentioned', sourceIds: ['weverse-modern-art'] },
   { id: 'moon-jar-artist', from: 'moon-jar-kwon', to: 'kwon-dae-sup', type: 'created_by', note: 'The work is presented as a Kwon Dae-sup moon jar.', evidenceLevel: 'confirmed', sourceIds: ['weverse-modern-art'] },
+  { id: 'rm-daegu-art-museum', from: 'rm', to: 'museum-daegu-art-museum', type: 'visited', date: '2021', note: 'Daegu Art Museum states that RM visited its exhibitions. The museum post is dated 8 November; the exact visit date is not stated.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['daegu-museum-rm-kang'] },
+  { id: 'rm-kang-carnation', from: 'rm', to: 'exhibition-kang-yobae-carnation', type: 'visited', date: '2021', note: 'Daegu Art Museum connects RM’s visit and photograph to Kang Yobae’s active solo exhibition.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['daegu-museum-rm-kang', 'artbava-kang-carnation'] },
+  { id: 'rm-munnamu', from: 'rm', to: 'artwork-kang-yobae-munnamu', type: 'mentioned', date: '2021', note: 'Daegu Art Museum identifies Munnamu (2020) as the work in RM’s public verification photograph. Visibility supports an encounter, not ownership.', evidenceLevel: 'mentioned', evidenceOrigin: 'official_summary', sourceIds: ['daegu-museum-rm-kang'] },
+  { id: 'munnamu-kang', from: 'artwork-kang-yobae-munnamu', to: 'kang-yobae', type: 'created_by', note: 'Daegu Art Museum credits Munnamu to Kang Yobae and supplies the title and year.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['daegu-museum-rm-kang'] },
+  { id: 'kang-carnation-daegu', from: 'exhibition-kang-yobae-carnation', to: 'museum-daegu-art-museum', type: 'held_at', date: '2021', note: 'The exhibition record and museum video document Kang Yobae’s exhibition at Daegu Art Museum.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['artbava-kang-carnation', 'daegu-museum-kang-video'] },
+  { id: 'munnamu-kang-carnation', from: 'artwork-kang-yobae-munnamu', to: 'exhibition-kang-yobae-carnation', type: 'shown_at', date: '2021', note: 'The museum identifies the work within RM’s visit context while the Kang Yobae exhibition was active.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['daegu-museum-rm-kang', 'artbava-kang-carnation'] },
   { id: 'rm-sfmoma-exhibition', from: 'rm', to: 'rm-x-sfmoma', type: 'collaborated_with', date: '2026', note: 'SFMOMA states that the exhibition is curated by RM with SFMOMA curators.', evidenceLevel: 'confirmed', sourceIds: ['sfmoma-rm-exhibition'] },
   { id: 'exhibition-sfmoma', from: 'rm-x-sfmoma', to: 'sfmoma', type: 'held_at', date: '2026', note: 'SFMOMA is the presenting museum for the exhibition.', evidenceLevel: 'confirmed', sourceIds: ['sfmoma-rm-exhibition'] },
   { id: 'rm-collection', from: 'rm', to: 'sfmoma', type: 'collected', date: '2026', note: 'SFMOMA explicitly describes the exhibition as featuring artworks from RM’s personal collection.', evidenceLevel: 'confirmed', sourceIds: ['sfmoma-rm-exhibition'] },
@@ -288,6 +353,12 @@ export const timelineEvents: TimelineEvent[] = [
     title: 'That Summer’s End appears among recently mentioned books',
     summary: 'The available source supports a recent mention, but not a recommendation and not a precise reading date.',
     relationIds: ['rm-that-summers-end'], sourceIds: ['weverse-bibilly-hills'],
+  },
+  {
+    id: 'event-daegu-kang-yobae', sortDate: '2021-11-08', displayDate: 'NOV 2021 · MUSEUM RECORD', precision: 'approximate', category: 'institutions',
+    title: 'A museum visit connects Kang Yobae’s writing to an exhibited work',
+    summary: 'Daegu Art Museum confirmed RM’s visit and identified Munnamu in his public photograph, completing a documented route from The Depth of the Landscape to Kang Yobae’s exhibition practice.',
+    relationIds: ['rm-daegu-art-museum', 'rm-kang-carnation', 'rm-munnamu', 'kang-carnation-daegu', 'munnamu-kang-carnation'], sourceIds: ['daegu-museum-rm-kang', 'artbava-kang-carnation', 'daegu-museum-kang-video'],
   },
   {
     id: 'event-books-2021', sortDate: '2021-12-31', displayDate: '2021 · PUBLIC RECORD', precision: 'approximate', category: 'literature',

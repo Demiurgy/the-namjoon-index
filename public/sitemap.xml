@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://namjoon.net/</loc></url>
+  <url><loc>https://namjoon.net/map</loc></url>
   <url><loc>https://namjoon.net/explore</loc></url>
   <url><loc>https://namjoon.net/timeline</loc></url>
   <url><loc>https://namjoon.net/sources</loc></url>
   <url><loc>https://namjoon.net/about</loc></url>
+  <url><loc>https://namjoon.net/entity/rm-kim-namjoon</loc></url>
+  <url><loc>https://namjoon.net/entity/yun-hyong-keun</loc></url>
+  <url><loc>https://namjoon.net/entity/kim-whanki</loc></url>
+  <url><loc>https://namjoon.net/entity/lee-ungno</loc></url>
+  <url><loc>https://namjoon.net/entity/kwon-dae-sup</loc></url>
+  <url><loc>https://namjoon.net/entity/joung-young-ju</loc></url>
+  <url><loc>https://namjoon.net/entity/kang-yobae</loc></url>
+  <url><loc>https://namjoon.net/entity/the-depth-of-the-landscape</loc></url>
+  <url><loc>https://namjoon.net/entity/honeybees-and-distant-thunder</loc></url>
+  <url><loc>https://namjoon.net/entity/that-summers-end</loc></url>
+  <url><loc>https://namjoon.net/entity/all-about-saul-leiter</loc></url>
+  <url><loc>https://namjoon.net/entity/the-midnight-library</loc></url>
+  <url><loc>https://namjoon.net/entity/doing-good-better</loc></url>
+  <url><loc>https://namjoon.net/entity/untitled-1973-yun-hyong-keun</loc></url>
+  <url><loc>https://namjoon.net/entity/the-eternal-song</loc></url>
+  <url><loc>https://namjoon.net/entity/bamboo-lee-ungno</loc></url>
+  <url><loc>https://namjoon.net/entity/moon-jar-kwon-dae-sup</loc></url>
+  <url><loc>https://namjoon.net/entity/munnamu-kang-yobae</loc></url>
+  <url><loc>https://namjoon.net/entity/kang-yobae-carnation</loc></url>
+  <url><loc>https://namjoon.net/entity/daegu-art-museum</loc></url>
+  <url><loc>https://namjoon.net/entity/rm-x-sfmoma</loc></url>
+  <url><loc>https://namjoon.net/entity/sfmoma</loc></url>
+  <url><loc>https://namjoon.net/entity/seoul-museum-of-art</loc></url>
+  <url><loc>https://namjoon.net/entity/indigo</loc></url>
+  <url><loc>https://namjoon.net/entity/mono</loc></url>
 </urlset>
