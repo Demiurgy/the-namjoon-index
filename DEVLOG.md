@@ -37,7 +37,9 @@
 - A production screenshot exposed the React Flow minimap as a large empty overlay in the lower-right corner; it has been removed in both themes while the zoom and fit controls remain available.
 - Finside area containers now keep a uniform 28px rounded rectangle in every semantic phase; their internal area hubs and grouped nodes use the same 165px-wide, 16px-radius rounded-rectangle language, so the `Areas → Groups` transition no longer changes either visual layer unexpectedly.
 - Entity cards already shared the same capped-width coordinate grid in Atlas and Finside, but Finside's taller area labels exposed an insufficient top gutter. Every detail region now reserves roughly 95–105px above its first content row, and Film & Television expands to fit all four rows rather than retaining its former one-row height.
-- The Atlas protocol prefix now reads `Protocol /`; the Finside protocol is approximately 100px tall on wide screens and has a compact mobile treatment.
+- The Finside gradient had only been attached to the home hero, while the app shell and wide-screen gutters still used a flat paper colour. The gradient now belongs to the full Finside shell, the protocol background spans the viewport behind its constrained content, and the hero's wide-screen top padding is capped at 86px.
+- The Finside protocol is now a full-width 58px desktop strip: its heading, explanation and methodology link share one line, with natural wrapping restored on small screens.
+- The Atlas protocol prefix now reads `Protocol /`; the Finside protocol uses a 58px full-width desktop strip and a compact wrapping mobile treatment.
 
 ### Verification
 

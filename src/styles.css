@@ -22,8 +22,8 @@ button { border: 0; cursor: pointer; color: inherit; }
 .theme-switch:hover { color: var(--indigo); border-color: var(--indigo); }
 .theme-dot { width: 8px; height: 8px; display: inline-block; border-radius: 50%; background: var(--indigo); box-shadow: 5px 0 0 #d96b61; }
 .theme-switch-arrow { margin-left: 5px; color: var(--indigo); font-size: 13px; }
-.theme-finside { --paper: #fff1f8; --ink: #26052f; --muted: #704166; --line: #e5b8d3; --indigo: #7413a3; --white: #fffaff; }
-.theme-finside .site-header { background: #fff1f8; border-bottom: 2px solid #ff5f7a; }
+.theme-finside { --paper: #fff1f8; --ink: #26052f; --muted: #704166; --line: #e5b8d3; --indigo: #7413a3; --white: #fffaff; background-color: #fff1f8; background-image: radial-gradient(circle at 12% 8%, rgba(255,95,122,.13), transparent 31%), radial-gradient(circle at 84% 28%, rgba(116,19,163,.11), transparent 36%), linear-gradient(135deg, #fff7fb 0%, #f8ebff 50%, #ffeaf2 100%); background-attachment: fixed; }
+.theme-finside .site-header { background: linear-gradient(90deg, rgba(255,241,248,.94), rgba(247,232,255,.92) 52%, rgba(255,232,241,.94)); border-bottom: 2px solid #ff5f7a; backdrop-filter: blur(14px); }
 .theme-finside .theme-dot { background: #7413a3; box-shadow: 5px 0 0 #ff5f7a; }
 .theme-finside .theme-switch { border-width: 2px; border-color: #7413a3; color: #7413a3; background: #fffaff; }
 .theme-finside .theme-switch-arrow, .theme-finside .map-open-link { color: #ff5f7a; }
@@ -54,13 +54,16 @@ main { flex: 1; }
 .principle-banner .principle-number { align-self: start; padding-top: 4px; color: var(--indigo); font: 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .08em; }
 .principle-banner h2 { max-width: 650px; margin: 0 0 7px; font-size: clamp(25px, 3vw, 38px); }
 .principle-banner p { max-width: 650px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
-.theme-finside .principle-banner { min-height: 98px; max-width: 1160px; padding: 14px 5vw 16px; border-bottom: 2px solid #ff5f7a; background: linear-gradient(90deg, rgba(255, 95, 122, .08), rgba(116, 19, 163, .08)); }
-.theme-finside .principle-banner h2 { margin-bottom: 4px; color: #7413a3; font-size: clamp(23px, 2.4vw, 32px); line-height: 1; }
-.theme-finside .principle-banner p { font-size: 12px; line-height: 1.35; }
+.theme-finside .principle-banner { position: relative; z-index: 0; isolation: isolate; width: 100%; min-height: 58px; max-width: none; gap: 24px; padding: 8px 5vw 9px; border-bottom: 0; background: transparent; }
+.theme-finside .principle-banner::before { content: ''; position: absolute; z-index: -1; inset: 0; border-bottom: 2px solid #ff5f7a; background: linear-gradient(90deg, rgba(255,95,122,.1), rgba(116,19,163,.12) 52%, rgba(255,95,122,.08)); }
+.theme-finside .principle-banner > div { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.theme-finside .principle-banner h2 { flex: 0 0 auto; max-width: none; margin: 0; color: #7413a3; font-size: clamp(17px, 1.6vw, 21px); line-height: 1; white-space: nowrap; }
+.theme-finside .principle-banner p { max-width: none; overflow: hidden; font-size: 11px; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
+.theme-finside .principle-banner .text-link { flex: 0 0 auto; font-size: 10px; white-space: nowrap; }
 .theme-finside .principle-banner .principle-number { color: #ff5f7a; }
-.theme-finside .hero-grid { background: linear-gradient(135deg, #fff1f8 0%, #f7e8ff 48%, #ffe3ea 100%); }
+.theme-finside .hero-grid { padding-top: clamp(56px, 4.5vw, 86px); background: linear-gradient(135deg, rgba(255,241,248,.78) 0%, rgba(247,232,255,.88) 48%, rgba(255,227,234,.82) 100%); }
 .theme-finside .hero-orbit { background: radial-gradient(circle at 50% 45%, rgba(116, 19, 163, .1), transparent 58%); }
-.theme-finside .route-section { background: #fff7fb; }
+.theme-finside .route-section { background: linear-gradient(180deg, rgba(255,247,251,.78), rgba(247,232,255,.68)); }
 
 .eyebrow { margin: 0 0 20px; color: var(--indigo); font: 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
 h1, h2, h3, p { margin-top: 0; }
@@ -646,9 +649,10 @@ h3 { font-size: 20px; line-height: 1.05; }
   .theme-finside .graph-legend button { font-size: 0; }
   .theme-finside .toolbar-label { font-size: 11px; }
   .theme-finside .domain-nav a { font-size: 11px; }
-  .theme-finside .principle-banner { min-height: 0; gap: 7px; padding: 12px 5vw 13px; }
-  .theme-finside .principle-banner h2 { font-size: 25px; }
-  .theme-finside .principle-banner p { font-size: 11px; }
+  .theme-finside .principle-banner { grid-template-columns: 1fr; min-height: 0; gap: 5px; padding: 10px 5vw 11px; }
+  .theme-finside .principle-banner > div { display: block; }
+  .theme-finside .principle-banner h2 { font-size: 19px; white-space: normal; }
+  .theme-finside .principle-banner p { margin-top: 4px; overflow: visible; font-size: 11px; white-space: normal; }
   .theme-finside .principle-banner .text-link { display: none; }
 }
 
