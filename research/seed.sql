@@ -111,6 +111,16 @@ VALUES
   ('claim-rm-midnight-library-read', 'src-ameblo-midnight-library-highlight', 'corroborates', 'In the SOOP 2 scene; episode and timestamp not supplied', 'The post identifies a passage RM highlighted in the book; the archived text is not treated as a substitute for checking the licensed episode.', '2026-08-10'),
   ('claim-rm-midnight-library-read', 'src-weverse-in-the-soop2-guide', 'context', 'Season 2 release schedule', 'Confirms the official programme and episode release dates but not the book-specific scene.', '2026-08-10');
 
+INSERT OR IGNORE INTO claim_discovery_credits
+  (claim_id, source_id, discovery_role, locator, credit_note, checked_at)
+VALUES
+  ('claim-rm-midnight-library-read', 'src-rkive-read-with-bts', 'identified', 'In the SOOP 2 table: episode 1 TBR mention; episode 3 reading', 'This archive supplied the most specific episode sequence used to frame the primary-source check.', '2026-08-10'),
+  ('claim-rm-midnight-library-read', 'src-reddit-its2-ep3', 'independently_identified', 'Episode 3 discussion dated 2021-10-29', 'Contemporaneous viewers independently identified RM reading the title in episode 3.', '2026-08-10'),
+  ('claim-rm-midnight-library-read', 'src-ameblo-midnight-library-highlight', 'identified', 'Highlighted-passage post', 'This fan record identified the passage associated with the later episode scene.', '2026-08-10'),
+  ('claim-rm-doing-good-better-shelf', 'src-vpl-namjoon-bookshelf', 'identified', 'Doing Good Better entry', 'Vancouver Public Library preserved the title identification and linked it to the dated bookshelf photograph.', '2026-08-10'),
+  ('claim-rm-doing-good-better-shelf', 'src-reddit-rm-20211005', 'preserved', 'Original submission URL', 'The contemporaneous thread preserves the official BTS_twt URL and the date of the bookshelf post.', '2026-08-10'),
+  ('claim-rm-depth-landscape-recommended', 'src-reddit-weekly-20201004', 'preserved', 'Official SNS table: 201004 Weverse — Namjoon', 'The weekly archive preserves the exact legacy Weverse URL needed for the unresolved primary check.', '2026-08-10');
+
 INSERT OR IGNORE INTO research_leads
   (id, domain, lead_text, proposed_entity_title, proposed_relation_type, discovery_origin, source_url, source_locator, status, notes)
 VALUES

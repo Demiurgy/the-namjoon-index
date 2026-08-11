@@ -1,0 +1,170 @@
+{
+  "reviewedAt": "2026-08-10",
+  "findings": [
+    {
+      "id": "finding-midnight-library-read",
+      "domain": "literature",
+      "entityId": "book-midnight-library",
+      "proposedRelation": "read",
+      "status": "corroborated",
+      "date": "2021-10-29",
+      "title": "RM read The Midnight Library during In the SOOP 2",
+      "summary": "Several independent recaps converge on episode 3 and describe RM beginning or reading the book.",
+      "unresolved": "The exact moment still needs an official episode timestamp or a licensed clip.",
+      "sources": [
+        {
+          "label": "read with bts rkive",
+          "url": "https://rkivelibrary.wordpress.com/2023/01/25/read-with-bts-rkive/",
+          "role": "Community identification",
+          "locator": "Episode 1 TBR mention; episode 3 reading"
+        },
+        {
+          "label": "r/bangtan — episode 3 discussion",
+          "url": "https://www.reddit.com/r/bangtan/comments/qic9ls",
+          "role": "Contemporaneous corroboration",
+          "locator": "Episode 3 discussion, 29 October 2021"
+        }
+      ]
+    },
+    {
+      "id": "finding-midnight-library-passage",
+      "domain": "literature",
+      "entityId": "book-midnight-library",
+      "proposedRelation": "mentioned",
+      "status": "verifying",
+      "title": "RM shared or highlighted a passage from The Midnight Library",
+      "summary": "A contemporaneous discussion and a separate fan archive attribute an episode 4 passage to the book.",
+      "unresolved": "The exact wording and timestamp have not been checked against the official paid episode.",
+      "sources": [
+        {
+          "label": "r/bangtan — episode 4 discussion",
+          "url": "https://www.reddit.com/r/bangtan/comments/qnama0",
+          "role": "Contemporaneous identification",
+          "locator": "Episode 4; exact timestamp pending"
+        },
+        {
+          "label": "Ameblo / moon-jin1992",
+          "url": "https://ameblo.jp/moon-jin1992/entry-12710503871.html",
+          "role": "Community corroboration",
+          "locator": "Highlighted-passage post"
+        }
+      ]
+    },
+    {
+      "id": "finding-midnight-library-recommendation",
+      "domain": "literature",
+      "entityId": "book-midnight-library",
+      "proposedRelation": "recommended",
+      "status": "verifying",
+      "title": "RM recommended The Midnight Library to V",
+      "summary": "A secondary article makes this specific claim about In the SOOP 2.",
+      "unresolved": "No official dialogue, episode locator or timestamp has yet been reproduced, so this is not treated as a confirmed recommendation.",
+      "sources": [
+        {
+          "label": "GQ India",
+          "url": "https://www.gqindia.com/content/gq-reads-5-books-recommended-by-rm-that-flaunt-the-bts-leaders-lyrical-prowess",
+          "role": "Secondary report",
+          "locator": "The Midnight Library entry"
+        }
+      ]
+    },
+    {
+      "id": "finding-midnight-library-product-placement",
+      "domain": "literature",
+      "entityId": "book-midnight-library",
+      "proposedRelation": "featured_in",
+      "status": "parked",
+      "title": "The Midnight Library exposure may have been product placement",
+      "summary": "A viewer discussion raised the possibility after repeated clear exposure and audiobook use.",
+      "unresolved": "No production credit, sponsorship disclosure or publisher confirmation was found. This remains speculation.",
+      "sources": [
+        {
+          "label": "r/bangtan — episode 5 discussion",
+          "url": "https://www.reddit.com/r/bangtan/comments/qsanxa",
+          "role": "Community discussion",
+          "locator": "Episode 5 discussion, 12 November 2021"
+        }
+      ]
+    },
+    {
+      "id": "finding-doing-good-better-bookshelf",
+      "domain": "literature",
+      "entityId": "book-doing-good-better",
+      "proposedRelation": "mentioned",
+      "status": "corroborated",
+      "date": "2021-10-05",
+      "title": "Doing Good Better appears in RM’s bookshelf photograph",
+      "summary": "Vancouver Public Library identifies the title in an official BTS account photograph, while a contemporaneous archive preserves the original post and date.",
+      "unresolved": "The exact spine still needs an independently reproducible match to a known edition. Visibility does not establish reading or recommendation.",
+      "sources": [
+        {
+          "label": "BTS official account / X",
+          "url": "https://x.com/BTS_twt/status/1445397240118382592",
+          "role": "Primary photograph",
+          "locator": "Photo 1; lower book area"
+        },
+        {
+          "label": "Vancouver Public Library — Namjoon’s Bookshelf",
+          "url": "https://vpl.bibliocommons.com/v2/list/display/1338249780/1429564517",
+          "role": "Institutional identification",
+          "locator": "Doing Good Better entry"
+        },
+        {
+          "label": "r/bangtan — 211005 RM",
+          "url": "https://www.reddit.com/r/bangtan/comments/q1xo77",
+          "role": "Preserved original link",
+          "locator": "5 October 2021 post archive"
+        }
+      ]
+    },
+    {
+      "id": "finding-doing-good-better-read-recommended",
+      "domain": "literature",
+      "entityId": "book-doing-good-better",
+      "proposedRelation": "read",
+      "status": "parked",
+      "title": "Reading or recommendation of Doing Good Better remains unverified",
+      "summary": "The current official summary supports only a recent mention, and the bookshelf image supports only possible visibility.",
+      "unresolved": "No direct statement or unambiguous scene showing that RM read or recommended the book was found in this research pass.",
+      "sources": [
+        {
+          "label": "Weverse Magazine — RM’s Bibilly Hills",
+          "url": "https://magazine.weverse.io/article/view/632?artist=BTS&lang=en",
+          "role": "Official summary",
+          "locator": "Reading section"
+        }
+      ]
+    },
+    {
+      "id": "finding-depth-landscape-recommendation",
+      "domain": "literature",
+      "entityId": "book-depth-of-the-landscape",
+      "proposedRelation": "recommended",
+      "status": "verifying",
+      "date": "2020-10-04",
+      "title": "RM explicitly recommended The Depth of the Landscape",
+      "summary": "A contemporaneous article attributes a recommendation to RM’s 4 October 2020 Weverse post, whose original URL is preserved by a community archive.",
+      "unresolved": "The original post wording and images still need to be rechecked in an authenticated Weverse session.",
+      "sources": [
+        {
+          "label": "RM / Weverse",
+          "url": "https://weverse.io/bts/artist/1640184234924405",
+          "role": "Known primary URL",
+          "locator": "Legacy artist post; login required"
+        },
+        {
+          "label": "Koreaboo",
+          "url": "https://www.koreaboo.com/news/bts-rm-latest-book-film-song-recommendations/",
+          "role": "Contemporaneous report",
+          "locator": "3 October 2020 article"
+        },
+        {
+          "label": "r/bangtan weekly archive",
+          "url": "https://www.reddit.com/r/bangtan/comments/j5032t",
+          "role": "Preserved primary link",
+          "locator": "Official SNS table, 4 October 2020"
+        }
+      ]
+    }
+  ]
+}

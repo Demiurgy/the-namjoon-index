@@ -76,6 +76,18 @@ CREATE TABLE IF NOT EXISTS claim_sources (
   PRIMARY KEY (claim_id, source_id, evidence_role)
 );
 
+CREATE TABLE IF NOT EXISTS claim_discovery_credits (
+  claim_id TEXT NOT NULL REFERENCES claims(id) ON DELETE CASCADE,
+  source_id TEXT NOT NULL REFERENCES sources(id),
+  discovery_role TEXT NOT NULL CHECK (discovery_role IN (
+    'identified', 'independently_identified', 'preserved', 'indexed'
+  )),
+  locator TEXT,
+  credit_note TEXT NOT NULL CHECK (length(trim(credit_note)) > 0),
+  checked_at TEXT NOT NULL,
+  PRIMARY KEY (claim_id, source_id, discovery_role)
+);
+
 CREATE TABLE IF NOT EXISTS research_leads (
   id TEXT PRIMARY KEY,
   domain TEXT NOT NULL CHECK (domain IN (
@@ -102,6 +114,7 @@ CREATE INDEX IF NOT EXISTS idx_claims_object ON claims(object_entity_id);
 CREATE INDEX IF NOT EXISTS idx_claims_verification ON claims(verification_status, publication_ready);
 CREATE INDEX IF NOT EXISTS idx_sources_authority ON sources(authority_rank, source_class);
 CREATE INDEX IF NOT EXISTS idx_leads_status ON research_leads(status, domain);
+CREATE INDEX IF NOT EXISTS idx_discovery_credits_claim ON claim_discovery_credits(claim_id);
 
 CREATE VIEW IF NOT EXISTS publication_queue AS
 SELECT

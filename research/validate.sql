@@ -41,6 +41,17 @@ WHERE evidence_origin = 'community_identification'
   AND publication_ready = 1;
 
 INSERT INTO validation_results
+SELECT 'published community identification without discovery credit', COUNT(*)
+FROM claims c
+WHERE c.evidence_origin = 'community_identification'
+  AND c.publication_ready = 1
+  AND NOT EXISTS (
+    SELECT 1
+    FROM claim_discovery_credits cdc
+    WHERE cdc.claim_id = c.id
+  );
+
+INSERT INTO validation_results
 SELECT 'corroborated claim with fewer than two evidence records', COUNT(*)
 FROM claims c
 WHERE c.verification_status = 'corroborated'

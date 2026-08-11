@@ -1,4 +1,4 @@
-import { entities, relations, sources, timelineEvents } from './index';
+import { communityArchives, entities, relations, researchFindings, sources, timelineEvents } from './index';
 
 const errors: string[] = [];
 const entityIds = new Set<string>();
@@ -23,7 +23,29 @@ for (const relation of relations) {
   if (!entityIds.has(relation.from) || !entityIds.has(relation.to)) errors.push(`Relation points to missing entity: ${relation.id}`);
   if (!relation.sourceIds.length) errors.push(`Relation has no source: ${relation.id}`);
   for (const sourceId of relation.sourceIds) if (!sourceIds.has(sourceId)) errors.push(`Relation points to missing source: ${relation.id} -> ${sourceId}`);
+  for (const credit of relation.discoveryCredits ?? []) {
+    if (!sourceIds.has(credit.sourceId)) errors.push(`Discovery credit points to missing source: ${relation.id} -> ${credit.sourceId}`);
+    if (!credit.note.trim()) errors.push(`Discovery credit has no note: ${relation.id} -> ${credit.sourceId}`);
+  }
   if (relation.type === 'collected' && relation.evidenceLevel !== 'confirmed') errors.push(`Collected relation must be confirmed: ${relation.id}`);
+}
+
+const communityArchiveIds = new Set<string>();
+for (const archive of communityArchives) {
+  if (communityArchiveIds.has(archive.id)) errors.push(`Duplicate community archive id: ${archive.id}`);
+  communityArchiveIds.add(archive.id);
+  if (!/^https?:\/\//.test(archive.url)) errors.push(`Invalid community archive URL: ${archive.id}`);
+  if (!archive.domains.length || !archive.sourceLinkage.trim()) errors.push(`Incomplete community archive: ${archive.id}`);
+}
+
+const researchFindingIds = new Set<string>();
+for (const finding of researchFindings) {
+  if (researchFindingIds.has(finding.id)) errors.push(`Duplicate research finding id: ${finding.id}`);
+  researchFindingIds.add(finding.id);
+  if (!entityIds.has(finding.entityId)) errors.push(`Research finding points to missing entity: ${finding.id} -> ${finding.entityId}`);
+  if (!finding.title.trim() || !finding.summary.trim() || !finding.unresolved.trim()) errors.push(`Incomplete research finding: ${finding.id}`);
+  if (!finding.sources.length) errors.push(`Research finding has no source trail: ${finding.id}`);
+  for (const source of finding.sources) if (!/^https?:\/\//.test(source.url) || !source.label.trim() || !source.role.trim()) errors.push(`Invalid research finding source: ${finding.id}`);
 }
 
 const timelineIds = new Set<string>();
@@ -44,4 +66,4 @@ for (const event of timelineEvents) {
 for (const relation of relations.filter((item) => item.date)) if (!timelineRelationIds.has(relation.id)) errors.push(`Dated relation missing from timeline events: ${relation.id}`);
 
 if (errors.length) throw new Error(errors.join('\n'));
-console.log(`Data valid: ${entities.length} entities, ${relations.length} relations, ${sources.length} sources, ${timelineEvents.length} timeline events.`);
+console.log(`Data valid: ${entities.length} entities, ${relations.length} relations, ${sources.length} sources, ${researchFindings.length} labelled research findings, ${communityArchives.length} community archives, ${timelineEvents.length} timeline events.`);
