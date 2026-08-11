@@ -34,6 +34,9 @@
 - The first compacting pass changed region dimensions but left hubs and group nodes at their old low coordinates. A follow-up screenshot correctly showed that the unused interior space was still present; the initial completion report was therefore inaccurate.
 - The corrective pass moved both the frames and their contents: area hubs and group nodes now sit close to their labels, the central RM node moved upward, and Music, Screen and Institutions form a tighter lower row.
 - Current region heights are 175–185px for `Areas`, 160–170px for `Groups`, and content-specific at `Entities` (120–380px depending on the domain).
+- A production screenshot exposed the React Flow minimap as a large empty overlay in the lower-right corner; it has been removed in both themes while the zoom and fit controls remain available.
+- Finside area containers now keep a uniform 28px rounded rectangle in every semantic phase; their internal area hubs and grouped nodes use the same 165px-wide, 16px-radius rounded-rectangle language, so the `Areas → Groups` transition no longer changes either visual layer unexpectedly.
+- Entity cards already shared the same capped-width coordinate grid in Atlas and Finside, but Finside's taller area labels exposed an insufficient top gutter. Every detail region now reserves roughly 95–105px above its first content row, and Film & Television expands to fit all four rows rather than retaining its former one-row height.
 - The Atlas protocol prefix now reads `Protocol /`; the Finside protocol is approximately 100px tall on wide screens and has a compact mobile treatment.
 
 ### Verification
