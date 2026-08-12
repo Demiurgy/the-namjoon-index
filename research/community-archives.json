@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-10",
+  "purpose": "Discovery inventory of community bibliographies, art-location maps and general BTS archives that can generate research leads for The Namjoon Index.",
+  "editorialRule": "An archive entry is a lead, never verification. Publish only after the underlying RM, BIGHIT/HYBE, broadcaster, publisher, artist, gallery, museum or catalogue source has been checked at a reproducible locator.",
+  "priorityDefinitions": {
+    "P0": "Extract first: specialised, structured and likely to yield many distinct leads.",
+    "P1": "Use for cross-checking, recovery of primary URLs or targeted extraction.",
+    "P2": "Use selectively when stronger archives are silent or inaccessible."
+  },
+  "archives": [
+    {
+      "id": "archive-namjoons-booklist",
+      "title": "Namjoon's Booklist",
+      "url": "https://namjoonsbooklist.com/",
+      "archiveType": "specialist_catalogue",
+      "domains": ["literature"],
+      "priority": "P0",
+      "access": "public_dynamic_site",
+      "coverageSignal": "The site describes itself as a living catalogue of books RM recommended, carried or was seen reading; the exact item count was not exposed to the text crawler.",
+      "sourceLinkage": "Claims every entry is traced to the interview, broadcast or post where the book surfaced.",
+      "strengths": [
+        "Specialised RM-only scope",
+        "Separates several modes of appearance in its own description",
+        "Promises item-level source links"
+      ],
+      "risks": [
+        "The catalogue is client-rendered and needs browser-assisted extraction",
+        "The archive's relationship labels must not be inherited without checking the cited source"
+      ],
+      "nextAction": "Open the rendered catalogue, export every title, author, archive label and cited primary URL, then deduplicate against existing entities."
+    },
+    {
+      "id": "archive-joonies-library",
+      "title": "Namjoon's Library",
+      "url": "https://joonieslibrary.carrd.co/",
+      "relatedUrls": [
+        "https://docs.google.com/spreadsheets/d/19_YBcNLmxMAz9fy8LAqCHJYTaEtwv-AvBQY4seAeKqA/edit?usp=sharing"
+      ],
+      "archiveType": "specialist_catalogue",
+      "domains": ["literature"],
+      "priority": "P0",
+      "access": "public_site_and_view_only_sheet",
+      "coverageSignal": "An actively curated list with a separate external spreadsheet; a preserved social mirror refers to the project's 100th covered book.",
+      "sourceLinkage": "Book cards describe Namjoon's connection and often route to a post or supporting resource.",
+      "strengths": [
+        "Specialised RM scope",
+        "Active curation",
+        "Useful educational context and title variants",
+        "Separate sheet is suitable for systematic intake"
+      ],
+      "risks": [
+        "The public page mixes evidentiary links with contextual reading resources",
+        "Some item detail lives on X and may be fragile or inaccessible"
+      ],
+      "nextAction": "Extract the external sheet, preserving each item's exact connection language and its outbound source separately from contextual resources."
+    },
+    {
+      "id": "archive-artwithrm",
+      "title": "ARTWITHRM",
+      "url": "https://artwithrm.com/the-blog/",
+      "relatedUrls": ["https://artwithrm.com/about/"],
+      "archiveType": "specialist_map",
+      "domains": ["visual_art", "museums_exhibitions"],
+      "priority": "P0",
+      "access": "public_site",
+      "coverageSignal": "The locations page exposed more than 50 museums, galleries, fairs and art spaces across Asia, Europe and North America in the first loaded page.",
+      "sourceLinkage": "The project says locations derive from RM's Instagram posts, media interviews or official schedules.",
+      "strengths": [
+        "Dedicated RM art-journey scope",
+        "Geographic structure",
+        "Location-level pages can seed museums, exhibitions and artworks",
+        "Community submission route may surface new leads"
+      ],
+      "risks": [
+        "A listed location does not by itself establish the visit date, exhibition or viewed artwork",
+        "Some pages may rely on deleted Instagram posts or media summaries",
+        "The map and some post pages are intermittently difficult to fetch"
+      ],
+      "nextAction": "Extract all location pages and record the page's stated origin; verify visit, exhibition and artwork as three separate possible claims."
+    },
+    {
+      "id": "archive-vpl-namjoons-bookshelf",
+      "title": "Vancouver Public Library — Namjoon's Bookshelf",
+      "url": "https://vpl.bibliocommons.com/v2/list/display/1338249780/1429564517",
+      "archiveType": "institutional_compilation",
+      "domains": ["literature", "visual_art"],
+      "priority": "P0",
+      "access": "public_site",
+      "coverageSignal": "83 catalogue items at review time, including literature, art books and exhibition catalogues.",
+      "sourceLinkage": "Many entries include a short provenance note such as an Instagram date, broadcast or bookshelf image.",
+      "strengths": [
+        "Structured bibliographic records",
+        "Often supplies dates and concise scene descriptions",
+        "Strong source for edition and creator normalisation"
+      ],
+      "risks": [
+        "The list mixes recommendations, visible possessions and books said to have influenced BTS",
+        "Short notes usually lack a direct primary URL",
+        "At least one platform attribution in the existing project research was inaccurate"
+      ],
+      "nextAction": "Extract all 83 records and split the VPL description into the narrowest candidate relation before searching for the dated primary post or video."
+    },
+    {
+      "id": "archive-rkive-library",
+      "title": "read with bts rkive",
+      "url": "https://rkivelibrary.wordpress.com/2023/01/25/read-with-bts-rkive/",
+      "archiveType": "annotated_bibliography",
+      "domains": ["literature", "music", "film_tv"],
+      "priority": "P1",
+      "access": "public_site",
+      "coverageSignal": "The compiler describes a 73-book working list and names the upstream archives used.",
+      "sourceLinkage": "Many remarks contain a date, programme name, scene description or link.",
+      "strengths": [
+        "Rich scene-level notes",
+        "Useful map of older fan bibliographies",
+        "Good recovery source for broadcasts and bookshelf-identification leads"
+      ],
+      "risks": [
+        "Mixes RM, other members, group concepts, props and fan theories",
+        "Reading status in the table can describe the compiler rather than RM",
+        "Some links point to comments or other community identifications"
+      ],
+      "nextAction": "Extract only RM-attributed rows and preserve the compiler's category and remarks verbatim in lead notes; reject theory-only rows from factual intake."
+    },
+    {
+      "id": "archive-bts-library-carrd",
+      "title": "BTS Library / Namjoon's reading list",
+      "url": "https://btsbook.carrd.co/",
+      "archiveType": "legacy_bibliography",
+      "domains": ["literature", "visual_art"],
+      "priority": "P1",
+      "access": "public_site",
+      "coverageSignal": "The page describes 132 Namjoon posts and presents a large alphabetical title list; last stated update is 2021-07-06.",
+      "sourceLinkage": "The list mainly provides title and creator; it rarely gives the original RM locator on the page.",
+      "strengths": [
+        "Large early inventory",
+        "Useful Korean and English title variants",
+        "Strong coverage of art books and catalogues"
+      ],
+      "risks": [
+        "Conflates books owned and recommended",
+        "Stale after mid-2021",
+        "Some outbound PDF/EPUB links may be unauthorised and must not be copied, downloaded or cited"
+      ],
+      "nextAction": "Use only as a title-discovery list. Ignore downloadable book files and locate independent public evidence for every proposed RM relationship."
+    },
+    {
+      "id": "archive-bts-bangtan-archive",
+      "title": "BTS Bangtan Archive",
+      "url": "https://btsarchive.com/",
+      "archiveType": "chronological_content_archive",
+      "domains": ["literature", "film_tv", "visual_art", "music", "museums_exhibitions"],
+      "priority": "P1",
+      "access": "public_site",
+      "coverageSignal": "A year-by-year archive from pre-debut through 2026 with separate social-media and content pages.",
+      "sourceLinkage": "Entries commonly link official Instagram, X, YouTube, Weverse or institutional posts and preserve dates.",
+      "strengths": [
+        "Strong chronology",
+        "Useful recovery path for official links and now-deleted social posts",
+        "Broad coverage of RM official activity"
+      ],
+      "risks": [
+        "Not specialised by cultural object",
+        "Archived screenshots are context, not a substitute for an available primary source",
+        "Search and navigation are manual"
+      ],
+      "nextAction": "Use dates and official outbound links to resolve leads generated by specialised book and art archives."
+    },
+    {
+      "id": "archive-bts-content-index",
+      "title": "BTS Content Index",
+      "url": "https://btscontentindex.carrd.co/",
+      "archiveType": "video_content_index",
+      "domains": ["literature", "film_tv", "visual_art", "music", "museums_exhibitions"],
+      "priority": "P1",
+      "access": "public_site_and_sheets",
+      "coverageSignal": "A chronological index of English-subtitled BTS video content from pre-debut onward, with separate paid-content listings.",
+      "sourceLinkage": "Designed to locate programmes, episodes and official or licensed video surfaces rather than identify cultural objects.",
+      "strengths": [
+        "Best candidate for resolving programme titles and dates",
+        "Useful bridge from a fan identification to an official episode or clip",
+        "Explicitly says it does not itself host paid content"
+      ],
+      "risks": [
+        "Not an object bibliography",
+        "Availability and legality of third-party subtitled links must be checked individually",
+        "A content listing does not verify what appears at a given timestamp"
+      ],
+      "nextAction": "Use after a lead names a programme; record the official programme URL and lawful access route, then inspect the exact timestamp separately."
+    },
+    {
+      "id": "archive-us-bts-army-locations",
+      "title": "US BTS ARMY — BTS in the U.S.",
+      "url": "https://www.usbtsarmy.com/bts-army-in-usa",
+      "archiveType": "location_guide",
+      "domains": ["visual_art", "museums_exhibitions"],
+      "priority": "P1",
+      "access": "public_site",
+      "coverageSignal": "State and city guides include RM's museum and gallery stops; the Texas page preserves source links and screenshots for deleted Instagram posts.",
+      "sourceLinkage": "Location entries commonly include an official site and a labelled reference link.",
+      "strengths": [
+        "Geographically structured",
+        "Explicit references",
+        "Can preserve visual context after RM archives a post"
+      ],
+      "risks": [
+        "Mixed BTS scope",
+        "Location pages also include restaurants, venues and photo spots outside this project's cultural scope",
+        "Deleted-post screenshots need independent corroboration where the public claim is consequential"
+      ],
+      "nextAction": "Extract only museum, gallery, foundation and art-site records attributable to RM; use the listed institution and date to find institutional corroboration."
+    },
+    {
+      "id": "archive-artansonyeondan",
+      "title": "artansonyeondan",
+      "url": "https://x.com/artansonyeondan",
+      "archiveType": "specialist_social_archive",
+      "domains": ["visual_art", "museums_exhibitions", "music"],
+      "priority": "P1",
+      "access": "social_platform_fragile",
+      "coverageSignal": "Community recommendations describe it as a long-running account that identifies artworks, art parallels and RM museum visits.",
+      "sourceLinkage": "Individual posts may contain artwork and venue identifications, but the account could not be audited systematically through the text search surface.",
+      "strengths": [
+        "Specialist art knowledge",
+        "Likely source of difficult artwork identifications",
+        "Useful historical coverage"
+      ],
+      "risks": [
+        "Social-only archive with unstable access",
+        "Search results can disappear or lose thread context",
+        "Some posts may be thematic comparison rather than documented RM connection"
+      ],
+      "nextAction": "Audit with an authenticated browser by date and keyword; save only post URLs and concise identification notes, never treat parallels as RM influence."
+    },
+    {
+      "id": "archive-rbangtan",
+      "title": "r/bangtan contemporaneous post archive",
+      "url": "https://www.reddit.com/r/bangtan/",
+      "archiveType": "community_event_archive",
+      "domains": ["literature", "film_tv", "visual_art", "music", "museums_exhibitions"],
+      "priority": "P1",
+      "access": "public_site",
+      "coverageSignal": "Dated submission threads and weekly round-ups frequently preserve the original official outbound URL and contemporary viewer observations.",
+      "sourceLinkage": "Usually strongest as a URL resolver or contemporaneous corroborating record, not as standalone authority.",
+      "strengths": [
+        "Precise dates",
+        "Often preserves legacy Weverse, X, Instagram and YouTube URLs",
+        "Episode discussion threads can narrow a scene to a specific release"
+      ],
+      "risks": [
+        "Not a controlled catalogue",
+        "Comments mix observation, memory, jokes and speculation",
+        "Search is noisy and post titles may omit the cultural object"
+      ],
+      "nextAction": "Search by date, title and event after specialised archives generate a lead; cite the recovered official URL as primary whenever accessible."
+    },
+    {
+      "id": "archive-tertulia-joonies-library",
+      "title": "Tertulia mirror of Namjoon's Library",
+      "url": "https://tertulia.com/voices/namjoons-library-indigo-books",
+      "archiveType": "social_post_mirror",
+      "domains": ["literature", "visual_art"],
+      "priority": "P2",
+      "access": "public_site",
+      "coverageSignal": "36 mirrored book records at review time, carrying text from Namjoon's Library posts and some original X links.",
+      "sourceLinkage": "Preserves parts of social captions and links, sometimes including the specific RM post or scene description.",
+      "strengths": [
+        "Recovery layer when X is inaccessible",
+        "Structured book metadata",
+        "Can expose source wording omitted from the Carrd overview"
+      ],
+      "risks": [
+        "Incomplete subset",
+        "Commercial book metadata may not match the edition visible in RM's source",
+        "Mirrored text is one step further from the primary material"
+      ],
+      "nextAction": "Use only to recover a JooniesLibrary post or primary URL that cannot be reached through the main archive."
+    },
+    {
+      "id": "archive-borasaek-vision-us-art-tour",
+      "title": "Borasaek Vision — A Very Artsy Tour: RM's Voyage through the US",
+      "url": "https://borasaekvision.wixsite.com/home/post/a-very-artsy-tour-rm-s-voyage-through-the-us",
+      "archiveType": "editorial_roundup",
+      "domains": ["visual_art", "museums_exhibitions"],
+      "priority": "P2",
+      "access": "public_site",
+      "coverageSignal": "A 2022 roundup of RM's December 2021 U.S. museum and gallery route, covering institutions and selected artworks.",
+      "sourceLinkage": "Captions often attribute images to @rkive and link institution pages for works or exhibitions.",
+      "strengths": [
+        "Coherent itinerary",
+        "Names venues, exhibitions and example works",
+        "Useful cross-check for the U.S. art-trip cluster"
+      ],
+      "risks": [
+        "Single-period coverage",
+        "Some institution descriptions are general context rather than evidence of RM's encounter",
+        "Image captions do not always link the exact original RM post"
+      ],
+      "nextAction": "Use to compare U.S. trip coverage against ARTWITHRM and US BTS ARMY; verify every venue and artwork separately."
+    },
+    {
+      "id": "archive-0613",
+      "title": "0613 Archive",
+      "url": "https://0613data.tumblr.com/",
+      "archiveType": "general_media_archive",
+      "domains": ["literature", "film_tv", "visual_art", "music", "museums_exhibitions"],
+      "priority": "P2",
+      "access": "public_site",
+      "coverageSignal": "A general BTS media archive with organised BangtanTV, Weverse and discography sections; it says 2021–2022 is fully updated.",
+      "sourceLinkage": "Useful for locating public content, not for supplying object-level claims.",
+      "strengths": [
+        "Coverage of the Instagram-launch and In the SOOP period",
+        "Organised by platform and year",
+        "Potential recovery route for missing video context"
+      ],
+      "risks": [
+        "Not RM- or culture-specific",
+        "Coverage outside 2021–2022 may be incomplete",
+        "Archived media must be checked for lawful public availability before use"
+      ],
+      "nextAction": "Use only when a dated lead cannot be resolved through BTS Content Index or an official platform."
+    }
+  ]
+}
