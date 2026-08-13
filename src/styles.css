@@ -493,6 +493,8 @@ h3 { font-size: 20px; line-height: 1.05; }
 .about-page > .disclaimer { order: 2; margin-bottom: 24px; }
 .about-page > .about-grid { order: 3; }
 .about-page > .disclaimer > span::after { content: 'Disclaimer'; display: block; margin-top: 5px; }
+.privacy-page > .privacy-updated { order: 4; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); color: var(--muted); font: 11px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .06em; }
+.privacy-updated span { color: var(--ink); }
 
 @media (max-width: 1080px) {
   .theme-science .site-header { position: relative; }

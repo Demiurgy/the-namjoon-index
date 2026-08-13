@@ -273,6 +273,27 @@ export const entities: Entity[] = [
     description: 'A coming-of-age drama that observes the difficult social world of adolescence from a young person’s point of view.',
   },
   {
+    id: 'series-in-the-soop-bts', slug: 'in-the-soop-bts-ver', type: 'series', title: 'In the SOOP BTS Ver.',
+    creator: 'BIGHIT MUSIC · JTBC', year: 2020,
+    description: 'An eight-episode reality series following BTS, including RM, during a restorative stay built around everyday routines, creative time and life away from the stage.',
+    externalLinks: [{ label: 'Official Weverse guide', url: 'https://weverse.io/bts/notice/640' }],
+  },
+  {
+    id: 'series-in-the-soop-bts-2', slug: 'in-the-soop-bts-ver-season-2', type: 'series', title: 'In the SOOP BTS Ver. Season 2',
+    creator: 'BIGHIT MUSIC · JTBC', year: 2021,
+    description: 'The five-episode second season returning BTS, including RM, to the In the SOOP setting; its public record also contains several book-identification research trails.',
+    externalLinks: [{ label: 'Official Weverse guide', url: 'https://weverse.io/bts/notice/1720' }],
+  },
+  {
+    id: 'podcast-fashion-neurosis-rm', slug: 'fashion-neurosis-with-bella-freud-rm', type: 'podcast', title: 'Fashion Neurosis with Bella Freud: RM',
+    creator: 'Bella Freud', year: 2026,
+    description: 'A filmed, hour-long conversation in which RM and designer Bella Freud discuss airport style, art and philosophy, Stendhal syndrome, Rick Owens and the pressure attached to leadership.',
+    externalLinks: [
+      { label: 'Official episode page', url: 'https://fashionneurosis.substack.com/p/rm-on-airport-style-bts-and-art-and' },
+      { label: 'Apple Podcasts show', url: 'https://podcasts.apple.com/us/podcast/fashion-neurosis-with-bella-freud/id1768794307' },
+    ],
+  },
+  {
     id: 'indigo', slug: 'indigo', type: 'album', title: 'Indigo', year: 2022,
     description: 'RM’s solo album, documented in the official BIGHIT MUSIC discography.',
     image: {
@@ -344,6 +365,10 @@ export const sources: Source[] = [
   {
     id: 'weverse-in-the-soop2-guide', title: 'In the SOOP BTS ver. Season 2 global paid content user guide', publisher: 'Weverse',
     url: 'https://weverse.io/bts/notice/1720', publishedAt: '2021-09-23', accessedAt: '2026-08-10', sourceType: 'official_media',
+  },
+  {
+    id: 'weverse-in-the-soop-guide', title: 'In the SOOP BTS ver. exclusive VOD guide', publisher: 'Weverse',
+    url: 'https://weverse.io/bts/notice/640', accessedAt: '2026-08-11', sourceType: 'official_media',
   },
   {
     id: 'publisher-hanbooks-depth', title: 'The Depth of the Landscape', publisher: 'HanBooks',
@@ -445,6 +470,10 @@ export const sources: Source[] = [
     id: 'recreio-world-of-love', title: 'RM names a favourite film', publisher: 'Recreio',
     url: 'https://recreio.com.br/noticias/entretenimento/qual-e-o-filme-favorito-do-rm-descubra-o-titulo-recomendado-pelo-lider-do-bts.phtml', publishedAt: '2026-06-01', accessedAt: '2026-08-11', sourceType: 'secondary',
   },
+  {
+    id: 'fashion-neurosis-rm', title: 'RM on Airport Style, BTS, and Art & Philosophy', publisher: 'Fashion Neurosis with Bella Freud',
+    url: 'https://fashionneurosis.substack.com/p/rm-on-airport-style-bts-and-art-and', publishedAt: '2026-07-22', accessedAt: '2026-08-11', sourceType: 'interview',
+  },
 ];
 
 export const relations: Relation[] = [
@@ -490,9 +519,18 @@ export const relations: Relation[] = [
   { id: 'rm-sweet-home', from: 'rm', to: 'series-sweet-home', type: 'watched', date: '2021', note: 'A report on RM’s live conversation records that he watched Sweet Home and discussed enjoying the series. The original broadcast locator remains to be added.', evidenceLevel: 'mentioned', evidenceOrigin: 'official_summary', sourceIds: ['republica-rm-sweet-home'] },
   { id: 'rm-you-and-everything-else', from: 'rm', to: 'series-you-and-everything-else', type: 'recommended', date: '2026', note: 'Netflix’s own BTS watchlist identifies You and Everything Else as recommended by RM.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['netflix-bts-watchlist'] },
   { id: 'rm-world-of-love', from: 'rm', to: 'film-the-world-of-love', type: 'mentioned', date: '2026', note: 'A recent report attributes a favourite-film statement to RM. Until the underlying fan conversation receives a precise locator, the index publishes only the narrower mentioned relationship.', evidenceLevel: 'mentioned', evidenceOrigin: 'public_observation', sourceIds: ['recreio-world-of-love'] },
+  { id: 'rm-in-the-soop-bts', from: 'rm', to: 'series-in-the-soop-bts', type: 'featured_in', date: '2020', note: 'Weverse’s official programme guide documents the BTS series, its eight televised episodes and exclusive behind-the-scenes releases; RM appears throughout as a BTS member.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['weverse-in-the-soop-guide'] },
+  { id: 'rm-in-the-soop-bts-2', from: 'rm', to: 'series-in-the-soop-bts-2', type: 'featured_in', date: '2021', note: 'Weverse’s official Season 2 guide documents five main episodes, behind footage and the programme’s JTBC broadcast schedule; RM appears throughout as a BTS member.', evidenceLevel: 'confirmed', evidenceOrigin: 'official_summary', sourceIds: ['weverse-in-the-soop2-guide'] },
+  { id: 'rm-fashion-neurosis', from: 'rm', to: 'podcast-fashion-neurosis-rm', type: 'featured_in', date: '2026', note: 'The programme’s official episode page publishes RM’s filmed conversation with Bella Freud and identifies its subjects directly, making this a confirmed guest appearance rather than a secondary mention.', evidenceLevel: 'confirmed', evidenceOrigin: 'direct_statement', sourceIds: ['fashion-neurosis-rm'] },
 ];
 
 export const timelineEvents: TimelineEvent[] = [
+  {
+    id: 'event-fashion-neurosis-rm', sortDate: '2026-07-22', displayDate: '22 JUL 2026', precision: 'exact', category: 'screen',
+    title: 'RM enters the Fashion Neurosis conversation',
+    summary: 'The official filmed episode records a long-form conversation with Bella Freud about fashion, art, philosophy and leadership, adding video podcasts to the screen archive as their own format.',
+    relationIds: ['rm-fashion-neurosis'], sourceIds: ['fashion-neurosis-rm'],
+  },
   {
     id: 'event-screen-2026', sortDate: '2026-06-01', displayDate: '2026 · PUBLIC RECORD', precision: 'approximate', category: 'screen',
     title: 'Two new screen choices enter the record',
@@ -542,6 +580,12 @@ export const timelineEvents: TimelineEvent[] = [
     relationIds: ['rm-sweet-home'], sourceIds: ['republica-rm-sweet-home'],
   },
   {
+    id: 'event-in-the-soop-2', sortDate: '2021-10-15', displayDate: '15 OCT — 12 NOV 2021', precision: 'exact', category: 'screen',
+    title: 'In the SOOP BTS Ver. returns for Season 2',
+    summary: 'The official five-episode second season places RM in the ensemble screen record and supplies the licensed programme context for several book-related research leads elsewhere in the index.',
+    relationIds: ['rm-in-the-soop-bts-2'], sourceIds: ['weverse-in-the-soop2-guide'],
+  },
+  {
     id: 'event-books-2021', sortDate: '2021-12-31', displayDate: '2021 · PUBLIC RECORD', precision: 'approximate', category: 'literature',
     title: 'Two books enter the public record',
     summary: 'The Midnight Library and Doing Good Better are documented as public appearances or mentions. The archive deliberately does not convert either appearance into endorsement.',
@@ -558,6 +602,12 @@ export const timelineEvents: TimelineEvent[] = [
     title: 'The Social Dilemma joins a book, film and song recommendation post',
     summary: 'The archived primary URL and a contemporaneous illustrated report converge on the documentary. Because the legacy post currently requires sign-in, the public graph retains the narrower mentioned label.',
     relationIds: ['rm-social-dilemma'], sourceIds: ['weverse-rm-20201004', 'koreaboo-rm-recs'],
+  },
+  {
+    id: 'event-in-the-soop', sortDate: '2020-08-19', displayDate: '19 AUG — 07 OCT 2020', precision: 'exact', category: 'screen',
+    title: 'In the SOOP BTS Ver. begins its first season',
+    summary: 'The official guide documents eight JTBC episodes and the expanded Weverse edition, adding an ensemble reality series featuring RM to the screen chronology.',
+    relationIds: ['rm-in-the-soop-bts'], sourceIds: ['weverse-in-the-soop-guide'],
   },
   {
     id: 'event-mono', sortDate: '2018-12-31', displayDate: '2018', precision: 'year', category: 'music',
