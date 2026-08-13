@@ -3,6 +3,7 @@ export type EntityType =
   | 'book'
   | 'film'
   | 'series'
+  | 'podcast'
   | 'artist'
   | 'artwork'
   | 'album'
