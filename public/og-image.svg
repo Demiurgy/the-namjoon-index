@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf9f5"/>
+      <stop offset="1" stop-color="#eee9df"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#282724" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <path d="M0 1H1200M0 629H1200" stroke="#d3cdc2"/>
+
+  <g opacity="0.48" fill="none" stroke-width="2">
+    <path d="M855 104L995 174L912 298L1066 384L970 530" stroke="#4b4d91"/>
+    <path d="M995 174L1120 116M912 298L787 382M1066 384L1150 494" stroke="#b88937"/>
+    <path d="M912 298L1052 265" stroke="#4d8064"/>
+    <path d="M787 382L880 505" stroke="#8b3d49"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <circle cx="855" cy="104" r="18" fill="#4b4d91"/>
+    <circle cx="995" cy="174" r="14" fill="#b88d61"/>
+    <circle cx="1120" cy="116" r="10" fill="#765691"/>
+    <circle cx="912" cy="298" r="22" fill="#4d8064"/>
+    <circle cx="1052" cy="265" r="12" fill="#4f78a4"/>
+    <circle cx="787" cy="382" r="16" fill="#8b3d49"/>
+    <circle cx="1066" cy="384" r="20" fill="#b88937"/>
+    <circle cx="880" cy="505" r="11" fill="#765691"/>
+    <circle cx="970" cy="530" r="14" fill="#4f78a4"/>
+    <circle cx="1150" cy="494" r="9" fill="#a36d29"/>
+  </g>
+
+  <g fill="#6f6a61" font-family="monospace" font-size="13" letter-spacing="2">
+    <text x="835" y="69">RM</text>
+    <text x="1018" y="171">BOOKS</text>
+    <text x="1084" y="92">MUSIC</text>
+    <text x="879" y="258">ART</text>
+    <text x="742" y="418">FILM</text>
+    <text x="1024" y="428">MUSEUMS</text>
+  </g>
+
+  <g transform="translate(72 62)">
+    <circle cx="27" cy="27" r="27" fill="#3f418c"/>
+    <text x="27" y="32" fill="#ffffff" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="-1">NI</text>
+    <text x="72" y="34" fill="#282724" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="-1">The Namjoon Index</text>
+  </g>
+
+  <g transform="translate(72 192)">
+    <text fill="#3f418c" font-family="monospace" font-size="15" letter-spacing="2.5">PUBLIC RESEARCH ATLAS</text>
+    <text y="82" fill="#282724" font-family="Georgia, serif" font-size="70" letter-spacing="-3">Culture, connected.</text>
+    <text y="140" fill="#282724" font-family="Georgia, serif" font-size="70" font-style="italic" letter-spacing="-3">Sources, visible.</text>
+    <text y="205" fill="#6f6a61" font-family="Arial, sans-serif" font-size="22">Books · Art · Music · Film · Museums</text>
+  </g>
+
+  <g transform="translate(72 552)" font-family="monospace" font-size="13" letter-spacing="1.3">
+    <text fill="#3f418c">NAMJOON.NET</text>
+    <text x="174" fill="#6f6a61">INDEPENDENT · UNOFFICIAL · SOURCE-BASED</text>
+  </g>
+</svg>
