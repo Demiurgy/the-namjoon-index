@@ -43,10 +43,6 @@ export const entities: Entity[] = [
     id: 'book-depth-of-the-landscape', slug: 'the-depth-of-the-landscape', type: 'book', title: 'The Depth of the Landscape',
     originalTitle: '풍경의 깊이', creator: 'Kang Yobae',
     description: 'A Korean-language collection bringing together Kang Yobae’s writing, paintings and reflections on art, history and the landscape of Jeju.',
-    image: {
-      url: '/images/books/depth-of-the-landscape.jpg', alt: 'Cover of The Depth of the Landscape by Kang Yobae',
-      credit: 'Cover: Dolbegae; bibliographic image via HanBooks', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://www.hanbooks.com/deofla.html',
-    },
     editorial: {
       title: 'The landscape as memory, not scenery',
       whyItMatters: 'Kang writes from inside his own visual practice, treating landscape as a record of bodies, history and lived time. The book therefore connects literature and visual art rather than simply explaining paintings.',
@@ -59,10 +55,6 @@ export const entities: Entity[] = [
     id: 'book-honeybees-distant-thunder', slug: 'honeybees-and-distant-thunder', type: 'book', title: 'Honeybees and Distant Thunder',
     originalTitle: '蜜蜂と遠雷', creator: 'Riku Onda', year: 2016,
     description: 'A Japanese novel following four musicians through an international piano competition and the different ways they understand talent, rivalry and listening.',
-    image: {
-      url: '/images/books/honeybees-distant-thunder.jpg', alt: 'Japanese cover of Honeybees and Distant Thunder by Riku Onda',
-      credit: 'Cover: Gentosha', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://www.gentosha.co.jp/book/detail/9784344030039/',
-    },
     editorial: {
       title: 'Listening as a creative act',
       whyItMatters: 'The novel treats performance as more than technical victory: every musician hears, interprets and changes the same musical world differently. Competition becomes a way to ask what originality and artistic generosity look like.',
@@ -75,10 +67,6 @@ export const entities: Entity[] = [
     id: 'book-that-summers-end', slug: 'that-summers-end', type: 'book', title: 'That Summer’s End',
     originalTitle: '그 여름의 끝', creator: 'Lee Seong-bok', year: 1990,
     description: 'A poetry collection in which natural images, love, suffering and change become instruments for sustained self-reflection.',
-    image: {
-      url: '/images/books/that-summers-end.jpg', alt: 'Korean cover of That Summer’s End by Lee Seong-bok',
-      credit: 'Cover: Munhakgwa Jisung; image via YES24', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://www.yes24.com/product/goods/64337',
-    },
     editorial: {
       title: 'Feeling held inside natural form',
       whyItMatters: 'Lee’s poems repeatedly let weather, paths, rivers and seasons carry emotions that resist direct explanation. The landscape is not background; it becomes the structure through which grief, longing and impermanence can be approached.',
@@ -91,10 +79,6 @@ export const entities: Entity[] = [
     id: 'book-all-about-saul-leiter', slug: 'all-about-saul-leiter', type: 'book', title: 'All About Saul Leiter',
     originalTitle: 'ソール・ライターのすべて', creator: 'Saul Leiter', year: 2017,
     description: 'A compact survey of Saul Leiter’s photographs, paintings and words, centered on his quiet and painterly attention to everyday New York.',
-    image: {
-      url: '/images/books/all-about-saul-leiter.jpg', alt: 'Japanese cover of All About Saul Leiter',
-      credit: 'Cover: Seigensha; photograph © Saul Leiter Foundation', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://www.seigensha.com/feature/saulleiter/',
-    },
     editorial: {
       title: 'A private scale of attention',
       whyItMatters: 'Leiter found abstraction, colour and tenderness in ordinary streets rather than chasing grand subjects. The book makes a case for looking slowly and allowing a fragment, reflection or obstruction to remain incomplete.',
@@ -107,10 +91,6 @@ export const entities: Entity[] = [
     id: 'book-midnight-library', slug: 'the-midnight-library', type: 'book', title: 'The Midnight Library',
     creator: 'Matt Haig', year: 2020,
     description: 'A novel about regret, possibility and the imagined lives that branch from choices not taken.',
-    image: {
-      url: '/images/books/midnight-library.jpg', alt: 'Cover of The Midnight Library by Matt Haig',
-      credit: 'Cover: Penguin Random House', license: 'Low-resolution editorial reproduction; representative edition', sourceUrl: 'https://www.penguinrandomhouse.com/books/575653/the-midnight-library-by-matt-haig/',
-    },
     editorial: {
       title: 'The seduction of the unlived life',
       whyItMatters: 'The novel turns counterfactual thinking into a literal library: every unopened life appears available, while fulfillment remains harder to measure. Its central tension is between imagined perfection and inhabiting one finite life.',
@@ -123,10 +103,6 @@ export const entities: Entity[] = [
     id: 'book-doing-good-better', slug: 'doing-good-better', type: 'book', title: 'Doing Good Better',
     creator: 'William MacAskill', year: 2015,
     description: 'An introduction to effective altruism and its argument for using evidence to compare how actions can help others.',
-    image: {
-      url: '/images/books/doing-good-better.jpg', alt: 'Cover of Doing Good Better by William MacAskill',
-      credit: 'Cover: Avery / Penguin Random House', license: 'Low-resolution editorial reproduction; representative edition', sourceUrl: 'https://www.penguinrandomhouse.com/books/316786/doing-good-better-by-william-macaskill/',
-    },
     editorial: {
       title: 'Good intentions subjected to evidence',
       whyItMatters: 'The book asks readers to examine not only whether an action feels generous, but how much good it actually produces. Its value to the map lies in the friction between moral emotion, measurement and responsibility.',
@@ -138,10 +114,6 @@ export const entities: Entity[] = [
   {
     id: 'untitled-1973-yun', slug: 'untitled-1973-yun-hyong-keun', type: 'artwork', title: 'Untitled', creator: 'Yun Hyong-keun', year: 1973,
     description: 'A work by Yun Hyong-keun listed by SFMOMA among the works in RM’s personal collection.',
-    image: {
-      url: '/images/artworks/yun-untitled-1973.jpg', alt: 'Untitled, 1973, by Yun Hyong-keun',
-      credit: '© Yun Seong-ryeol; courtesy PKM Gallery; photo courtesy Seoul Auction', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://www.sfmoma.org/exhibition/rm-x-sfmoma/',
-    },
     editorial: {
       title: 'Restraint that accumulates force',
       whyItMatters: 'Yun’s dark vertical fields are built from repeated layers of umber and ultramarine. Their apparent simplicity holds material time, pressure and variation, asking for slower attention than a single glance can provide.',
@@ -152,10 +124,6 @@ export const entities: Entity[] = [
   {
     id: 'the-eternal-song', slug: 'the-eternal-song', type: 'artwork', title: 'The Eternal Song', originalTitle: '영원한 노래', creator: 'Kim Whanki', year: 1957,
     description: 'A painting by Kim Whanki that RM was photographed with at an exhibition at Seoul Museum of Art’s Buk-Seoul Museum of Art.',
-    image: {
-      url: '/images/artworks/eternal-song.jpg', alt: 'The Eternal Song, 1957, by Kim Whanki',
-      credit: '© Whanki Foundation and Whanki Museum', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://magazine.weverse.io/article/view/120?artist=BTS&lang=en',
-    },
     editorial: {
       title: 'A modern language made from inherited symbols',
       whyItMatters: 'Birds, mountains, clouds, deer and ceramics gather into a modernist composition without losing their connection to Korean visual and poetic traditions. The work makes cultural continuity feel active rather than fixed.',
@@ -166,10 +134,6 @@ export const entities: Entity[] = [
   {
     id: 'bamboo-lee-ungno', slug: 'bamboo-lee-ungno', type: 'artwork', title: 'Bamboo', originalTitle: '대나무', creator: 'Lee Ungno', year: 1971,
     description: 'An ink bamboo painting by Lee Ungno discussed in Weverse Magazine alongside RM’s public post and museum visit.',
-    image: {
-      url: '/images/artworks/bamboo.jpg', alt: 'Bamboo, 1971, by Lee Ungno',
-      credit: '© Lee Ungno Museum', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://magazine.weverse.io/article/view/120?artist=BTS&lang=en',
-    },
     editorial: {
       title: 'Tradition as a living method',
       whyItMatters: 'Bamboo belongs to a classical ink-painting lineage, yet Lee’s scale, rhythm and later movement toward abstraction make tradition a point of departure. Looking across his career reveals change without a clean break from earlier practice.',
@@ -180,14 +144,10 @@ export const entities: Entity[] = [
   {
     id: 'moon-jar-kwon', slug: 'moon-jar-kwon-dae-sup', type: 'artwork', title: 'Moon Jar', originalTitle: '달항아리', creator: 'Kwon Dae-sup',
     description: 'A contemporary moon jar associated with RM’s public interest in Kwon Dae-sup’s ceramics.',
-    image: {
-      url: '/images/artworks/moon-jar.jpg', alt: 'A Moon Jar by Kwon Dae-sup',
-      credit: 'Image courtesy K Auction', license: 'Low-resolution editorial reproduction; representative work', sourceUrl: 'https://magazine.weverse.io/article/view/120?artist=BTS&lang=en',
-    },
     editorial: {
       title: 'Perfection made human by asymmetry',
       whyItMatters: 'A moon jar is joined from two separately formed halves, so its calm geometry contains slight imbalance and the visible intelligence of hand, clay and fire. Kwon renews a historic form without erasing those irregularities.',
-      possibleResonance: 'The object brings together restraint, craft and Korean material tradition—three themes visible elsewhere in the art cluster. The available image is representative, and the archive does not claim it is the exact jar RM held.',
+      possibleResonance: 'The object brings together restraint, craft and Korean material tradition—three themes visible elsewhere in the art cluster. The archive does not claim any single jar is the exact one RM held.',
       themes: ['ceramics', 'craft', 'asymmetry', 'white porcelain', 'Korean tradition'],
     },
   },
@@ -296,19 +256,11 @@ export const entities: Entity[] = [
   {
     id: 'indigo', slug: 'indigo', type: 'album', title: 'Indigo', year: 2022,
     description: 'RM’s solo album, documented in the official BIGHIT MUSIC discography.',
-    image: {
-      url: '/images/music/indigo.jpg', alt: 'Cover of Indigo by RM',
-      credit: 'Album cover: BIGHIT MUSIC; image via Apple Music', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://music.apple.com/us/album/indigo/1654548355',
-    },
     externalLinks: [{ label: 'Official album page', url: 'https://bts.ibighit.com/eng/discography/rm/detail/indigo/' }],
   },
   {
     id: 'mono', slug: 'mono', type: 'album', title: 'mono.', year: 2018,
     description: 'RM’s playlist-style release, documented in the official BIGHIT MUSIC discography.',
-    image: {
-      url: '/images/music/mono.png', alt: 'Cover of mono. by RM',
-      credit: 'Album cover: BIGHIT MUSIC', license: 'Low-resolution editorial reproduction', sourceUrl: 'https://bts.ibighit.com/eng/discography/rm/detail/mono/',
-    },
     externalLinks: [{ label: 'Official album page', url: 'https://bts.ibighit.com/eng/discography/rm/detail/mono/' }],
   },
 ];

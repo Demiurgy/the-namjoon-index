@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-09-30",
   "policy": {
     "defaultPublicationState": "hold",
     "rule": "An official or institutional image is a canonical reference, not proof of a reusable license. A small local derivative may be used only for editorial identification or discussion, with a credit and source link and without zoom or download. Full-quality, decorative or promotional use requires recorded terms or permission; otherwise use a typographic fallback.",
@@ -20,7 +20,8 @@
       "hold",
       "editorial_thumbnail",
       "approved"
-    ]
+    ],
+    "currentDecision": "2026-09-30: all third-party images were removed from the repository and the site. Every entity uses an original typographic card until rights are cleared."
   },
   "assets": [
     {
@@ -34,7 +35,7 @@
       "sourceOwner": "HanBooks",
       "credit": "Cover of 풍경의 깊이 by Kang Yobae, published by Dolbegae",
       "rightsStatus": "publisher_terms_check_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic cover using the Korean title 풍경의 깊이",
       "notes": "The ISBN and Korean edition match the volume described by Weverse, but the underlying RM post should be checked before calling this the exact physical copy he held."
     },
@@ -49,7 +50,7 @@
       "sourceOwner": "Gentosha",
       "credit": "Cover of 蜜蜂と遠雷 by Riku Onda, published by Gentosha",
       "rightsStatus": "publisher_terms_check_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic cover using the Japanese title 蜜蜂と遠雷",
       "notes": "Weverse names the book by its romanized Japanese title, so the original 2016 Japanese edition is a stronger candidate than a later English translation."
     },
@@ -64,7 +65,7 @@
       "sourceOwner": "YES24",
       "credit": "Cover of 그 여름의 끝 by Lee Seong-bok, published by Munhakgwa Jisung",
       "rightsStatus": "publisher_terms_check_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic cover using the Korean title 그 여름의 끝",
       "notes": "A contemporary report reproduces RM’s Instagram Story with this Korean collection. Keep probable_observed until the archived frame is compared side by side with the edition."
     },
@@ -79,7 +80,7 @@
       "sourceOwner": "Seigensha Art Publishing",
       "credit": "Cover of ソール・ライターのすべて, published by Seigensha; cover photography is protected by the Saul Leiter Foundation",
       "rightsStatus": "permission_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic cover with title and photographer credit",
       "notes": "This cover incorporates a protected Saul Leiter photograph, so it should not be treated like a generic bibliographic thumbnail."
     },
@@ -94,7 +95,7 @@
       "sourceOwner": "Penguin Random House",
       "credit": "Cover of The Midnight Library by Matt Haig, published by Penguin Random House",
       "rightsStatus": "publisher_terms_check_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic cover until the In the SOOP edition is matched",
       "notes": "This is an official representative cover, not yet the exact edition visible in In the SOOP 2."
     },
@@ -109,7 +110,7 @@
       "sourceOwner": "Penguin Random House",
       "credit": "Cover of Doing Good Better by William MacAskill, published by Avery",
       "rightsStatus": "publisher_terms_check_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic cover until the bookshelf spine is matched",
       "notes": "The exact edition in RM’s 2021 bookshelf photograph is still an open visual-identification task."
     },
@@ -123,7 +124,7 @@
       "sourceOwner": "SFMOMA",
       "credit": "Yun Hyong-keun, Untitled, 1973; collection of RM; © Yun Seong-ryeol, courtesy PKM Gallery; photo courtesy Seoul Auction",
       "rightsStatus": "permission_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Abstract typographic artwork card with title, artist and year",
       "notes": "SFMOMA supplies an exact caption and image, but the credit line explicitly identifies a copyright holder and image providers."
     },
@@ -137,7 +138,7 @@
       "sourceOwner": "Weverse Magazine",
       "credit": "Kim Whanki, Eternal Song, 1957. © Whanki Foundation and Whanki Museum",
       "rightsStatus": "permission_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Artwork card using the title, artist, year and museum source link",
       "notes": "The Weverse page prohibits unauthorized reproduction and distribution."
     },
@@ -151,7 +152,7 @@
       "sourceOwner": "Weverse Magazine",
       "credit": "Lee Ungno, Bamboo, 1971. © Lee Ungno Museum",
       "rightsStatus": "permission_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Artwork card using the title, artist, year and museum source link",
       "notes": "The institutional credit identifies the image owner; no reusable license is stated."
     },
@@ -165,7 +166,7 @@
       "sourceOwner": "Weverse Magazine",
       "credit": "Kwon Dae-sup, Moon Jar. Image courtesy K Auction",
       "rightsStatus": "permission_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Artwork card using the artist and generic work title",
       "notes": "Kwon’s moon jars are individual works. The available source does not establish that this reproduction is the same physical jar RM held."
     },
@@ -194,7 +195,7 @@
       "sourceOwner": "Apple Music / BIGHIT MUSIC",
       "credit": "Album cover of Indigo by RM; BIGHIT MUSIC; image via Apple Music",
       "rightsStatus": "publisher_terms_check_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic album card using the title Indigo",
       "notes": "Published only as a reduced editorial identifier with a source link; not available for zoom or download."
     },
@@ -209,7 +210,7 @@
       "sourceOwner": "BIGHIT MUSIC",
       "credit": "Official cover of mono. by RM; BIGHIT MUSIC",
       "rightsStatus": "publisher_terms_check_required",
-      "publicationState": "editorial_thumbnail",
+      "publicationState": "hold",
       "fallback": "Typographic album card using the title mono.",
       "notes": "Published only as a reduced editorial identifier with a source link; not available for zoom or download."
     }
