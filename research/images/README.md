@@ -1,20 +1,15 @@
-# Image asset research
+# Image publication policy
 
-`../image-assets.json` is the editorial registry for book covers and artwork reproductions. It deliberately separates four questions:
+`../image-assets.json` records image sources and publication decisions. A source URL, credit, small size, or an editorial label does not grant reuse rights.
 
-1. Is this the correct work or edition?
-2. Is the source canonical?
-3. Who must be credited?
-4. May the image be copied into the public site?
+Publish a third-party image only when its registry record has `rightsStatus: "cleared"`, `publicationState: "approved"`, a `rightsUrl`, a matching `localPath`, and a documented scope. The source, credit and terms must accompany the image. All other candidates stay on hold and must not have files in `public/`.
 
-An official publisher, museum or magazine page answers the second question, but does not automatically answer the fourth. `publicationState: "hold"` means the candidate may be used for research and visual matching only. `publicationState: "editorial_thumbnail"` allows a small local derivative solely to identify or discuss the entity, with its credit and canonical source displayed. It must not offer zoom, download, publication-quality resolution or decorative reuse.
+## Current decision — 2026-09-30
 
-Do not hotlink these candidates from the production site. For an editorial thumbnail or cleared asset, save an optimized local derivative, preserve the original aspect ratio, write meaningful alt text and carry the complete credit into the entity card.
+All twelve third-party images remain removed, preserving the cleanup in main. Custom placeholders labelled “Image unavailable due to copyright” replace them; their entity pages retain image credits and original source links.
 
-## Next checks
+Seigensha cover-specific terms were found at https://www.seigensha.com/contact-list/ and https://en.seigensha.com/copyrighted-materials/. The cover remains on hold for the later image review; no notification has been sent and no image has been restored.
 
-- Compare the *The Midnight Library* cover against the official *In the SOOP 2* frame and record ISBN/edition if visible.
-- Match the *Doing Good Better* spine in the 2021 bookshelf photograph to a specific edition.
-- Recheck RM’s original posts for *The Depth of the Landscape*, *Honeybees and Distant Thunder* and *All About Saul Leiter* before marking their editions exact.
-- Ask the relevant publisher or rights holder whether low-resolution editorial cover display is allowed.
-- Ask the museum, gallery or artist estate for web-display permission for artwork reproductions; record scope, duration and required credit verbatim.
+`npm run build` checks the image registry and public image files before building. It also regenerates third-party software notices from installed production dependencies.
+
+After deployment, verify removed image URLs and any old preview deployments separately: this local change does not delete previously published deployments or purge their caches.

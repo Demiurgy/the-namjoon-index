@@ -1,4 +1,5 @@
 import { communityArchives, entities, relations, researchFindings, sources, timelineEvents } from './index';
+import imageInventory from '../../research/image-assets.json';
 
 const errors: string[] = [];
 const entityIds = new Set<string>();
@@ -15,9 +16,12 @@ for (const entity of entities) {
   if (entity.image) {
     if (!entity.image.url.startsWith('/images/')) errors.push(`Entity image must be a local editorial asset: ${entity.id}`);
     if (!entity.image.alt.trim() || !entity.image.credit?.trim() || !entity.image.sourceUrl) errors.push(`Entity image missing alt, credit or source: ${entity.id}`);
+    const asset = imageInventory.assets.find((item) => item.entityId === entity.id);
+    if (!asset || asset.publicationState !== 'approved' || asset.rightsStatus !== 'cleared' || !asset.rightsUrl || asset.rightsUrl !== entity.image.rightsUrl || !('localPath' in asset) || asset.localPath !== entity.image.url) errors.push(`Entity image lacks approved reuse terms: ${entity.id}`);
   }
   if (entity.editorial && (!entity.editorial.whyItMatters.trim() || !entity.editorial.possibleResonance.trim() || !entity.editorial.themes.length)) errors.push(`Incomplete editorial reading: ${entity.id}`);
 }
+
 
 for (const relation of relations) {
   if (!entityIds.has(relation.from) || !entityIds.has(relation.to)) errors.push(`Relation points to missing entity: ${relation.id}`);

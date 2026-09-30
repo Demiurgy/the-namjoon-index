@@ -3,7 +3,7 @@
   "updatedAt": "2026-09-30",
   "policy": {
     "defaultPublicationState": "hold",
-    "rule": "An official or institutional image is a canonical reference, not proof of a reusable license. A small local derivative may be used only for editorial identification or discussion, with a credit and source link and without zoom or download. Full-quality, decorative or promotional use requires recorded terms or permission; otherwise use a typographic fallback.",
+    "rule": "Publish only assets with recorded permission or applicable reuse terms and approved publication state. Source attribution and reduced resolution alone do not authorize reuse. Held files must not be included in public/ or dist/.",
     "allowedEditionMatch": [
       "exact_observed",
       "probable_observed",
@@ -82,7 +82,10 @@
       "rightsStatus": "permission_required",
       "publicationState": "hold",
       "fallback": "Typographic cover with title and photographer credit",
-      "notes": "This cover incorporates a protected Saul Leiter photograph, so it should not be treated like a generic bibliographic thumbnail."
+      "notes": "Removed from publication with all other third-party images in main. Publisher cover-specific reuse terms were found at https://www.seigensha.com/contact-list/; keep on hold for a separate image review before reintroduction.",
+      "rightsUrl": "https://www.seigensha.com/contact-list/",
+      "reviewedAt": "2026-09-30",
+      "usageScope": "Unaltered whole book cover on the book detail page only, with title, author and publisher. No graph thumbnails, crops, filters or decorative reuse."
     },
     {
       "entityId": "book-midnight-library",

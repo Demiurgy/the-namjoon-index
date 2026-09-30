@@ -55,11 +55,16 @@ export type Entity = {
   creator?: string;
   year?: number;
   description: string;
+  imagePlaceholder?: {
+    credit: string;
+    sourceUrl: string;
+  };
   image?: {
     url: string;
     alt: string;
     credit?: string;
     license?: string;
+    rightsUrl: string;
     sourceUrl?: string;
   };
   editorial?: EditorialReading;

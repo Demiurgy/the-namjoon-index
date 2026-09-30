@@ -43,6 +43,7 @@ export const entities: Entity[] = [
     id: 'book-depth-of-the-landscape', slug: 'the-depth-of-the-landscape', type: 'book', title: 'The Depth of the Landscape',
     originalTitle: '풍경의 깊이', creator: 'Kang Yobae',
     description: 'A Korean-language collection bringing together Kang Yobae’s writing, paintings and reflections on art, history and the landscape of Jeju.',
+    imagePlaceholder: { credit: 'Cover: Dolbegae; bibliographic image via HanBooks', sourceUrl: 'https://www.hanbooks.com/deofla.html' },
     editorial: {
       title: 'The landscape as memory, not scenery',
       whyItMatters: 'Kang writes from inside his own visual practice, treating landscape as a record of bodies, history and lived time. The book therefore connects literature and visual art rather than simply explaining paintings.',
@@ -55,6 +56,7 @@ export const entities: Entity[] = [
     id: 'book-honeybees-distant-thunder', slug: 'honeybees-and-distant-thunder', type: 'book', title: 'Honeybees and Distant Thunder',
     originalTitle: '蜜蜂と遠雷', creator: 'Riku Onda', year: 2016,
     description: 'A Japanese novel following four musicians through an international piano competition and the different ways they understand talent, rivalry and listening.',
+    imagePlaceholder: { credit: 'Cover: Gentosha', sourceUrl: 'https://www.gentosha.co.jp/book/detail/9784344030039/' },
     editorial: {
       title: 'Listening as a creative act',
       whyItMatters: 'The novel treats performance as more than technical victory: every musician hears, interprets and changes the same musical world differently. Competition becomes a way to ask what originality and artistic generosity look like.',
@@ -67,6 +69,7 @@ export const entities: Entity[] = [
     id: 'book-that-summers-end', slug: 'that-summers-end', type: 'book', title: 'That Summer’s End',
     originalTitle: '그 여름의 끝', creator: 'Lee Seong-bok', year: 1990,
     description: 'A poetry collection in which natural images, love, suffering and change become instruments for sustained self-reflection.',
+    imagePlaceholder: { credit: 'Cover: Munhakgwa Jisung; image via YES24', sourceUrl: 'https://www.yes24.com/product/goods/64337' },
     editorial: {
       title: 'Feeling held inside natural form',
       whyItMatters: 'Lee’s poems repeatedly let weather, paths, rivers and seasons carry emotions that resist direct explanation. The landscape is not background; it becomes the structure through which grief, longing and impermanence can be approached.',
@@ -79,6 +82,7 @@ export const entities: Entity[] = [
     id: 'book-all-about-saul-leiter', slug: 'all-about-saul-leiter', type: 'book', title: 'All About Saul Leiter',
     originalTitle: 'ソール・ライターのすべて', creator: 'Saul Leiter', year: 2017,
     description: 'A compact survey of Saul Leiter’s photographs, paintings and words, centered on his quiet and painterly attention to everyday New York.',
+    imagePlaceholder: { credit: 'Cover: Seigensha; photograph © Saul Leiter Foundation', sourceUrl: 'https://www.seigensha.com/feature/saulleiter/' },
     editorial: {
       title: 'A private scale of attention',
       whyItMatters: 'Leiter found abstraction, colour and tenderness in ordinary streets rather than chasing grand subjects. The book makes a case for looking slowly and allowing a fragment, reflection or obstruction to remain incomplete.',
@@ -91,6 +95,7 @@ export const entities: Entity[] = [
     id: 'book-midnight-library', slug: 'the-midnight-library', type: 'book', title: 'The Midnight Library',
     creator: 'Matt Haig', year: 2020,
     description: 'A novel about regret, possibility and the imagined lives that branch from choices not taken.',
+    imagePlaceholder: { credit: 'Cover: Penguin Random House', sourceUrl: 'https://www.penguinrandomhouse.com/books/575653/the-midnight-library-by-matt-haig/' },
     editorial: {
       title: 'The seduction of the unlived life',
       whyItMatters: 'The novel turns counterfactual thinking into a literal library: every unopened life appears available, while fulfillment remains harder to measure. Its central tension is between imagined perfection and inhabiting one finite life.',
@@ -103,6 +108,7 @@ export const entities: Entity[] = [
     id: 'book-doing-good-better', slug: 'doing-good-better', type: 'book', title: 'Doing Good Better',
     creator: 'William MacAskill', year: 2015,
     description: 'An introduction to effective altruism and its argument for using evidence to compare how actions can help others.',
+    imagePlaceholder: { credit: 'Cover: Avery / Penguin Random House', sourceUrl: 'https://www.penguinrandomhouse.com/books/316786/doing-good-better-by-william-macaskill/' },
     editorial: {
       title: 'Good intentions subjected to evidence',
       whyItMatters: 'The book asks readers to examine not only whether an action feels generous, but how much good it actually produces. Its value to the map lies in the friction between moral emotion, measurement and responsibility.',
@@ -114,6 +120,7 @@ export const entities: Entity[] = [
   {
     id: 'untitled-1973-yun', slug: 'untitled-1973-yun-hyong-keun', type: 'artwork', title: 'Untitled', creator: 'Yun Hyong-keun', year: 1973,
     description: 'A work by Yun Hyong-keun listed by SFMOMA among the works in RM’s personal collection.',
+    imagePlaceholder: { credit: '© Yun Seong-ryeol; courtesy PKM Gallery; photo courtesy Seoul Auction', sourceUrl: 'https://www.sfmoma.org/exhibition/rm-x-sfmoma/' },
     editorial: {
       title: 'Restraint that accumulates force',
       whyItMatters: 'Yun’s dark vertical fields are built from repeated layers of umber and ultramarine. Their apparent simplicity holds material time, pressure and variation, asking for slower attention than a single glance can provide.',
@@ -124,6 +131,7 @@ export const entities: Entity[] = [
   {
     id: 'the-eternal-song', slug: 'the-eternal-song', type: 'artwork', title: 'The Eternal Song', originalTitle: '영원한 노래', creator: 'Kim Whanki', year: 1957,
     description: 'A painting by Kim Whanki that RM was photographed with at an exhibition at Seoul Museum of Art’s Buk-Seoul Museum of Art.',
+    imagePlaceholder: { credit: '© Whanki Foundation and Whanki Museum', sourceUrl: 'https://magazine.weverse.io/article/view/120?artist=BTS&lang=en' },
     editorial: {
       title: 'A modern language made from inherited symbols',
       whyItMatters: 'Birds, mountains, clouds, deer and ceramics gather into a modernist composition without losing their connection to Korean visual and poetic traditions. The work makes cultural continuity feel active rather than fixed.',
@@ -134,6 +142,7 @@ export const entities: Entity[] = [
   {
     id: 'bamboo-lee-ungno', slug: 'bamboo-lee-ungno', type: 'artwork', title: 'Bamboo', originalTitle: '대나무', creator: 'Lee Ungno', year: 1971,
     description: 'An ink bamboo painting by Lee Ungno discussed in Weverse Magazine alongside RM’s public post and museum visit.',
+    imagePlaceholder: { credit: '© Lee Ungno Museum', sourceUrl: 'https://magazine.weverse.io/article/view/120?artist=BTS&lang=en' },
     editorial: {
       title: 'Tradition as a living method',
       whyItMatters: 'Bamboo belongs to a classical ink-painting lineage, yet Lee’s scale, rhythm and later movement toward abstraction make tradition a point of departure. Looking across his career reveals change without a clean break from earlier practice.',
@@ -144,6 +153,7 @@ export const entities: Entity[] = [
   {
     id: 'moon-jar-kwon', slug: 'moon-jar-kwon-dae-sup', type: 'artwork', title: 'Moon Jar', originalTitle: '달항아리', creator: 'Kwon Dae-sup',
     description: 'A contemporary moon jar associated with RM’s public interest in Kwon Dae-sup’s ceramics.',
+    imagePlaceholder: { credit: 'Image courtesy K Auction', sourceUrl: 'https://magazine.weverse.io/article/view/120?artist=BTS&lang=en' },
     editorial: {
       title: 'Perfection made human by asymmetry',
       whyItMatters: 'A moon jar is joined from two separately formed halves, so its calm geometry contains slight imbalance and the visible intelligence of hand, clay and fire. Kwon renews a historic form without erasing those irregularities.',
@@ -256,11 +266,13 @@ export const entities: Entity[] = [
   {
     id: 'indigo', slug: 'indigo', type: 'album', title: 'Indigo', year: 2022,
     description: 'RM’s solo album, documented in the official BIGHIT MUSIC discography.',
+    imagePlaceholder: { credit: 'Album cover: BIGHIT MUSIC; image via Apple Music', sourceUrl: 'https://music.apple.com/us/album/indigo/1654548355' },
     externalLinks: [{ label: 'Official album page', url: 'https://bts.ibighit.com/eng/discography/rm/detail/indigo/' }],
   },
   {
     id: 'mono', slug: 'mono', type: 'album', title: 'mono.', year: 2018,
     description: 'RM’s playlist-style release, documented in the official BIGHIT MUSIC discography.',
+    imagePlaceholder: { credit: 'Album cover: BIGHIT MUSIC', sourceUrl: 'https://bts.ibighit.com/eng/discography/rm/detail/mono/' },
     externalLinks: [{ label: 'Official album page', url: 'https://bts.ibighit.com/eng/discography/rm/detail/mono/' }],
   },
 ];
