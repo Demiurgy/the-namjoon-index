@@ -28,4 +28,8 @@ npm run build
 - [Development log](./DEVLOG.md) — decisions, milestones and next steps.
 - [Changelog](./CHANGELOG.md) — user-facing project history.
 
+## License
+
+Source code is released under the [MIT License](./LICENSE). **Images are excluded**: book covers, album covers and artwork reproductions in `public/images/` belong to their rights holders, are used only for editorial identification with credit, and are not licensed for reuse. See [LICENSE](./LICENSE) and `research/image-assets.json`.
+
 The project is independent and unofficial. It is not affiliated with RM, BTS, BIGHIT MUSIC or HYBE.
