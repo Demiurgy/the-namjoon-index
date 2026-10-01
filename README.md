@@ -30,6 +30,6 @@ npm run build
 
 ## License
 
-Source code is released under the [MIT License](./LICENSE). **Images are excluded**: book covers, album covers and artwork reproductions in `public/images/` belong to their rights holders, are used only for editorial identification with credit, and are not licensed for reuse. See [LICENSE](./LICENSE) and `research/image-assets.json`.
+Source code is released under the [MIT License](./LICENSE). **Images are excluded**: book covers, album covers and artwork reproductions belong to their rights holders, are used only for editorial identification with credit, and are not licensed for reuse. See [IMAGE-RIGHTS.md](./IMAGE-RIGHTS.md) and `research/image-assets.json`.
 
 The project is independent and unofficial. It is not affiliated with RM, BTS, BIGHIT MUSIC or HYBE.
